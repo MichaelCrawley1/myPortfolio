@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="height=device-height, 
+                      width=device-width, initial-scale=1.0, 
+                      minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Experiment</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <script src="https://use.fontawesome.com/e1e4c3939f.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/modalPopUp.js" defer></script>
+</head>
+
+<body>
+    <!---html classes will be set up using the Block Element Modifier (BEM) styled system.  My method will involve letters with dashes (-) as a prefix to enabled the reader to understand if a section of code is a component or a layout element.  Glossary is displayed below:
+
+        c- = this equals a component that is likely to get reused
+        l- = this equals a class that acts as block layout like a reusable container for example
+        h- = the h prefix is to signify helper classes like clearfix to get elements back in the html document flow
+        js- = this is to signify when we need to use JavaScript on an block or a block element to bring in dynamic functionality.
+        c-js- = will refer to both components and components that rely on JavaScript functionality
+        c-mq- = could be for media queries.
+
+        In addition, throughout this document there will be a comment that says, 'modifier here, please see css comments for what this does or what it is for'.  This way by using the find search tool provided by the editor we can quickly find the modifier we are looking for.  Might be an advantage to say for media queries too.
+        ---->
+    <!--This section has the nav menus for the mobile screen and desktop screen using display: flex and grid for some drop down columns--->
+    <!---the header section---->
+    <div class="l-basic-grid">
+        <section class="c-hero h-grid" id="heroHome">
+            <!--- this is the hamburger menu system until 900 pixels---->
+            <div class="c-hero-svg-container h-grid">
+                <div class="c-hero-layer-for-fat-fingers-mobile ">
+                    <a href="#" class="c-hero-hamburger-link">
+                        <img src="img/HamburgerMobileMenu.svg" alt="a hamburger svg icon" class="c-hero-hamburger-svg">
+                    </a>
+                </div>
+            </div>
+            <!--- end of the hamburger mobile menu system ---->
+            <!--- this is the desktop menu system displaying at 900 pixels --->
+            <div class="c-hero-desktop-nav-menu ">
+                <nav class="c-hero-desktop-nav ">
+                    <ul class="c-hero-desktop-nav-list h-flex">
+                        <li class="c-hero-desktop-nav-list-item"><a href="#heroHome" class="c-hero-desktop-nav-list-item-link">Home</a></li>
+                        <li class="c-hero-desktop-nav-list-item"><a href="#aboutMeInnerLink" class="c-hero-desktop-nav-list-item-link">about</a></li>
+                        <li class="c-hero-desktop-nav-list-item"><a href="#portfolioModalSection" class="c-hero-desktop-nav-list-item-link">Portfolio</a></li>
+                        <li class="c-hero-desktop-nav-list-item"><a href="#contactFormSection" class="c-hero-desktop-nav-list-item-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <header class="c-hero-heading h-flex">
+                <h1 class="c-hero-portfolio-title">
+                    Web development <br><span class="c-hero-portfolio-title-gold">Portfolio</span><br>Michael Crawley
+                </h1>
+            </header>
+        </section>
+        <!---here is way the mobile nav menu will go---->
+        <div class="c-mobile-nav-container">
+            <nav class="c-mobile-nav-menu">
+                <ul class="c-mobile-nav-menu-list h-grid">
+                    <li class="c-mobile-nav-menu-list-item h-grid">
+                        <div class="c-mobile-nav-hamburger-exit-container">
+                            <a href="#" class="c-mobile-nav-hamburger-exit-container-link">
+                                <img src="img/mobileHamburgerClose.svg" alt="and x mark to get back to menu screen" class="c-mobile-nav-exit-svg">
+                            </a>
+                        </div><a href="#heroHome" class="c-mobile-nav-menu-list-item-links">Home</a>
+                    </li>
+                    <li class="c-mobile-nav-menu-list-item h-grid"><a href="#aboutMeInnerLink" class="c-mobile-nav-menu-list-item-links">about</a></li>
+                    <li class="c-mobile-nav-menu-list-item h-grid"><a href="#portfolioModalSection" class="c-mobile-nav-menu-list-item-links">portfolio</a></li>
+                    <li class="c-mobile-nav-menu-list-item h-grid c-mobile-nav-menu-list-item--no-border "><a href="#contactFormSection" class="c-mobile-nav-menu-list-item-links">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!----end of the mobile nav menu ----->
+        <section class="c-about-me h-grid" id="aboutMeInnerLink">
+            <div class="c-about-me-background-left"></div>
+            <div class="c-about-me-background-centre">
+                <h1 class="c-about-me-heading">About Me</h1>
+                <div class="c-about-me-flex-container h-flex">
+                    <img src="img/imageForVideo.png" class="c-about-me-video">
+                    <svg id="PlayVideo" xmlns="http://www.w3.org/2000/svg" width="60" height="53" viewBox="0 0 60 53" class="c-about-me-play-icon">
+                        <g id="Polygon_2" data-name="Polygon 2" transform="translate(60) rotate(90)" fill="#c1b88e">
+                            <path d="M 52.23256683349609 59.5 L 0.7674344182014465 59.5 L 26.5 1.237587332725525 L 52.23256683349609 59.5 Z" stroke="none" />
+                            <path d="M 26.5 2.475151062011719 L 1.534858703613281 59 L 51.46514129638672 59 L 26.5 2.475151062011719 M 26.5 0 L 53 60 L 0 60 L 26.5 0 Z" stroke="none" fill="#707070" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="c-about-me-background-right"></div>
+        </section>
+        <section class="c-letter-skills h-grid">
+            <div class="c-letter-skills-content-center h-flex">
+                <div class="c-letter-skills-image-letter"></div>
+                <h5 class="c-letter-skills-title">Skills</h5>
+                <ul class="c-letter-skills-list">
+                    <li class="c-letter-skills-list-item">- Core Full-Stack of HTML5, CSS3, JavaScript with PHP & MySql</li>
+                    <li class="c-letter-skills-list-item">- JavaScript Libraries use with jQuery, Dojo Toolkit, MooTools, Ext.js</li>
+                    <li class="c-letter-skills-list-item">- Developed responsive websites using SASS (CSS pre-processor) and Sublime Text Editor</li>
+                    <li class="c-letter-skills-list-item">- A passion for User Experience and best practices</li>
+                    <li class="c-letter-skills-list-item">- App Design Creation with AdobeXD</li>
+                    <li class="c-letter-skills-list-item">- Preferred CSS pre-processor is SASS with Codekit</li>
+                    <li class="c-letter-skills-list-item">- Cross browser and platform testing for Mac, Windows, iOS andAndroid</li>
+                    <li class="c-letter-skills-list-item">- Introduced to Java Programming via Mobile Development with Android studio</li>
+                </ul>
+            </div>
+            <div class="c-letters-skills-paragraph-text-and-heading">
+                <h1 class="c-letters-skills-paragraph-text-and-heading-title">Hi, I’m Michael. Nice to meet you.</h1>
+                <p class="c-letters-skills-paragraph-text-and-heading-desc">I am a Glasgow-based front end web developer with over 15 years experience working as both a freelancer, and in an agency environment. I am passionate about what I do, i'm one of those lucky people who loves their job and I like to think that reflects in the quality of my work.</p>
+                <p class="c-letters-skills-paragraph-text-and-heading-desc">Creating efficient, fast and user-friendly websites is every bit as important to me as creating beautiful, hand-crafted designs. Usability, speed and aesthetics are all high priorities to me when developing and designing. Every project I build is a mobile responsive website, so your content will always be served in the best possible way to your audience, and every site is built with Wordpress at it's very core, so the content is all editable by you!
+                </p>
+                <p class="c-letters-skills-paragraph-text-and-heading-desc">My Macbook Pro is possibly the most important non-living thing in my life, it allows me to work for you no matter where in the world that I may be at that time. Equally, just because you may not be in Glasgow, doesn't mean we couldn't work together; i've got many clients across Europe, from London to Berlin and I even do the odd bit of work for some friendly Americans!
+                </p>
+                <p class="c-letters-skills-paragraph-text-and-heading-desc">If you’re looking for a brochure web site to be designed and developed, or a powerful, yet lightweight e-commerce system, then these are just some of the web design; development services that I offer. Or if you’re simply looking for someone to assist with an existing site, or you feel that your site is slow and needs looked at to optimise it for speed purposes then I can help with that too.</p>
+            </div>
+        </section>
+        <section class="c-portfolio-modal h-grid" id="portfolioModalSection">
+            <div class="c-portfolio-modal-flex-container h-flex">
+                <h1 class="c-portfolio-modal-title">
+                    My work
+                </h1>
+                <div class="c-portfolio-modal-grid h-grid">
+                    <figure class="c-portfolio-modal-grid-background-img-uws h-position">
+                        <figcaption class="c-portfolio-modal-grid-hover-effect">
+                            <h1 class="c-portfolio-modal-grid-hover-title">Project name
+                            </h1>
+                            <p class="c-portfolio-modal-grid-hover-desc">This is a short description of how the project goes</p>
+                            <a href="#" class="c-portfolio-modal-grid-hover-link">Read More
+                                <img src="img/arrow.svg" alt="arrow to next page" class="c-portfolio-modal-grid-hover-link-arrow-svg">
+                            </a>
+                        </figcaption>
+                        <!---portfolio modal one--->
+                        <div class="c-pop-up-project h-grid" id="c-pop-up-project-from-link">
+                            <div class="c-pop-up-project-background-image-uni">
+                            </div>
+                            <button class="c-pop-up-project-x-to-escape-image-button c-pop-up-project-x-to-escape-image-button--white ">
+                                <img src="img/xThisTimeExit.svg" alt="" class="c-pop-up-project-x-to-escape-image">
+                                <a href="#c-pop-up-project-from-link" class="c-pop-up-project-x-link-out-of-modal"></a>
+                            </button>
+                            <div class="c-pop-up-project-title-container">
+                                <h1 class="c-pop-up-project-title"> The Masters Project
+                                </h1>
+                            </div>
+                            <h5 class="c-pop-up-project-sub-title">The Research Question</h5>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <div class="c-pop-up-project-image-container-one">
+                                <img src="img/uni.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-image">
+                            </div>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <div class="c-pop-up-project-image-container-two">
+                                <img src="img/uni.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-image">
+                            </div>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <div class="c-pop-up-project-image-container-three">
+                                <img src="img/uni.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-image">
+                            </div>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <div class="c-pop-up-project-button-container h-flex">
+                                <button class="c-pop-up-project-button">Visit Site</button>
+                                <button class="c-pop-up-project-button c-pop-up-project-button--two">See Code</button>
+                            </div>
+                        </div>
+                        <!---end of portfolio--->
+                    </figure>
+                    <figure class="c-portfolio-modal-grid-background-img-metallica h-position">
+                        <figcaption class="c-portfolio-modal-grid-hover-effect">
+                            <h1 class="c-portfolio-modal-grid-hover-title-small-boxes  ">Project Name
+                            </h1>
+                            <a href="#c-pop-up-project-from-link" class="c-portfolio-modal-grid-hover-link">Read More
+                                <img src="img/arrow.svg" alt="arrow to next page" class="c-portfolio-modal-grid-hover-link-arrow-svg"></a>
+                        </figcaption>
+                        <!---portfolio modal two--->
+                        <div class="c-pop-up-project h-grid">
+                            <div class="c-pop-up-project-background-image-metallica">
+                            </div>
+                            <button class="c-pop-up-project-x-to-escape-image-button">
+                                <img src="img/xThisTimeExit.svg" alt="" class="c-pop-up-project-x-to-escape-image">
+                                <a href="#c-pop-up-project-from-link" class="c-pop-up-project-x-link-out-of-modal"></a>
+                            </button>
+                            <div class="c-pop-up-project-title-container">
+                                <h1 class="c-pop-up-project-title"> The Masters Project
+                                </h1>
+                            </div>
+                            <h5 class="c-pop-up-project-sub-title">The Research Question</h5>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <div class="c-pop-up-project-image-container-one">
+                                <img src="img/metallica.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-image">
+                            </div>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <div class="c-pop-up-project-image-container-two">
+                                <img src="img/metallica.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-image">
+                            </div>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <div class="c-pop-up-project-image-container-three">
+                                <img src="img/metallica.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-image">
+                            </div>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <div class="c-pop-up-project-button-container h-flex">
+                                <button class="c-pop-up-project-button">Visit Site</button>
+                                <button class="c-pop-up-project-button c-pop-up-project-button--two">See Code</button>
+                            </div>
+                        </div>
+                        <!---end of portfolio two--->
+                    </figure>
+                    <figure class="c-portfolio-modal-grid-background-img-tomeStory h-position">
+                        <figcaption class="c-portfolio-modal-grid-hover-effect">
+                            <h1 class="c-portfolio-modal-grid-hover-title-small-boxes  ">Project Name
+                            </h1>
+                            <a href="#c-pop-up-project-from-link" class="c-portfolio-modal-grid-hover-link">Read More
+                                <img src="img/arrow.svg" alt="arrow to next page" class="c-portfolio-modal-grid-hover-link-arrow-svg"></a>
+                        </figcaption>
+                        <!---portfolio modal three--->
+                        <div class="c-pop-up-project h-grid">
+                            <div class="c-pop-up-project-background-image-tomeStory">
+                            </div>
+                            <button class="c-pop-up-project-x-to-escape-image-button">
+                                <img src="img/xThisTimeExit.svg" alt="" class="c-pop-up-project-x-to-escape-image">
+                                <a href="#c-pop-up-project-from-link" class="c-pop-up-project-x-link-out-of-modal"></a>
+                            </button>
+                            <div class="c-pop-up-project-title-container">
+                                <h1 class="c-pop-up-project-title"> The Masters Project
+                                </h1>
+                            </div>
+                            <h5 class="c-pop-up-project-sub-title">The Research Question</h5>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <div class="c-pop-up-project-image-container-one">
+                                <img src="img/tome.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-image">
+                            </div>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <div class="c-pop-up-project-image-container-two">
+                                <img src="img/tome.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-image">
+                            </div>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <div class="c-pop-up-project-image-container-three">
+                                <img src="img/tome.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-image">
+                            </div>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <div class="c-pop-up-project-button-container h-flex">
+                                <button class="c-pop-up-project-button">Visit Site</button>
+                                <button class="c-pop-up-project-button c-pop-up-project-button--two">See Code</button>
+                            </div>
+                        </div>
+                        <!---end of portfolio three--->
+                    </figure>
+                    <figure class="c-portfolio-modal-grid-background-img-movies h-position">
+                        <figcaption class="c-portfolio-modal-grid-hover-effect">
+                            <h1 class="c-portfolio-modal-grid-hover-title-small-boxes  ">Project Name
+                            </h1>
+                            <a href="#c-pop-up-project-from-link" class="c-portfolio-modal-grid-hover-link">Read More
+                                <img src="img/arrow.svg" alt="arrow to next page" class="c-portfolio-modal-grid-hover-link-arrow-svg"></a>
+                        </figcaption>
+                        <!---portfolio modal four--->
+                        <div class="c-pop-up-project h-grid">
+                            <div class="c-pop-up-project-background-image-movies">
+                            </div>
+                            <button class="c-pop-up-project-x-to-escape-image-button">
+                                <img src="img/xThisTimeExit.svg" alt="" class="c-pop-up-project-x-to-escape-image">
+                                <a href="#c-pop-up-project-from-link" class="c-pop-up-project-x-link-out-of-modal"></a>
+                            </button>
+                            <div class="c-pop-up-project-title-container">
+                                <h1 class="c-pop-up-project-title"> The Masters Project
+                                </h1>
+                            </div>
+                            <h5 class="c-pop-up-project-sub-title">The Research Question</h5>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <div class="c-pop-up-project-image-container-one">
+                                <img src="img/5-elysium.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-image">
+                            </div>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <div class="c-pop-up-project-image-container-two">
+                                <img src="img/5-elysium.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-image">
+                            </div>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <div class="c-pop-up-project-image-container-three">
+                                <img src="img/5-elysium.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-image">
+                            </div>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <div class="c-pop-up-project-button-container h-flex">
+                                <button class="c-pop-up-project-button">Visit Site</button>
+                                <button class="c-pop-up-project-button c-pop-up-project-button--two">See Code</button>
+                            </div>
+                        </div>
+                        <!---end of portfolio four--->
+                    </figure>
+                    <figure class="c-portfolio-modal-grid-background-img-britishGas h-position">
+                        <figcaption class="c-portfolio-modal-grid-hover-effect">
+                            <h1 class="c-portfolio-modal-grid-hover-title-small-boxes  ">Project Name
+                            </h1>
+                            <a href="#c-pop-up-project-from-link" class="c-portfolio-modal-grid-hover-link">Read More
+                                <img src="img/arrow.svg" alt="arrow to next page" class="c-portfolio-modal-grid-hover-link-arrow-svg"></a>
+                        </figcaption>
+                        <!---portfolio modal five--->
+                        <div class="c-pop-up-project h-grid">
+                            <div class="c-pop-up-project-background-image-BG">
+                            </div>
+                            <button class="c-pop-up-project-x-to-escape-image-button">
+                                <img src="img/xThisTimeExit.svg" alt="" class="c-pop-up-project-x-to-escape-image">
+                                <a href="#c-pop-up-project-from-link" class="c-pop-up-project-x-link-out-of-modal"></a>
+                            </button>
+                            <div class="c-pop-up-project-title-container">
+                                <h1 class="c-pop-up-project-title"> The Masters Project
+                                </h1>
+                            </div>
+                            <h5 class="c-pop-up-project-sub-title">The Research Question</h5>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <div class="c-pop-up-project-image-container-one">
+                                <img src="img/britishgas.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-image">
+                            </div>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <div class="c-pop-up-project-image-container-two">
+                                <img src="img/britishgas.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-image">
+                            </div>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <div class="c-pop-up-project-image-container-three">
+                                <img src="img/britishgas.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-image">
+                            </div>
+                            <p class="c-pop-up-project-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                            <div class="c-pop-up-project-button-container h-flex">
+                                <button class="c-pop-up-project-button">Visit Site</button>
+                                <button class="c-pop-up-project-button c-pop-up-project-button--two">See Code</button>
+                            </div>
+                        </div>
+                        <!---end of portfolio five--->
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="c-contact h-grid" id="contactFormSection">
+            <div class="c-contact-flex-container h-flex">
+                <h1 class="c-contact-title">Contact Me</h1>
+                <form action="#" class="c-contact-form">
+                    <label for="firstName" class="c-contact-label">
+                        full name: <span class="c-contact-label-star">*</span>
+                        <input placeholder="John Doe" type="text" class="c-contact-form-input" id="test">
+                    </label>
+                    <label for="email" class="c-contact-label">
+                        email: <span class="c-contact-label-star">*</span>
+                        <input placeholder="john.doe@gmail.com" type="text" class="c-contact-form-input">
+                    </label>
+                    <label for="message" class="c-contact-label">
+                        message: <span class="c-contact-label-star">*</span>
+                        <textarea placeholder="Please help me design and develop my 
+website……." id="" cols="30" rows="10" class="c-contact-form-message-input"></textarea>
+                    </label>
+                    <button type="submit" class="c-contact-button">send</button>
+                </form>
+            </div>
+        </section>
+        <section class="c-portfolio-footer h-grid">
+            <div class="c-portfolio-footer-flex-container h-flex">
+                <p class="c-portfolio-footer-desc">Follow me on social Media</p>
+                <div class="c-portfolio-footer-svg-container">
+                    <a href="#" class="c-portfolio-footer-social-media-links-linkedIn">
+                        <!---<img src="img/linkedIn.svg" alt="svg social media links linked in" class="c-portfolio-footer-svg-icons">
+                        <img src="img/linkedInGoldHover.svg" alt="svg social media links github" class="c-portfolio-footer-svg-icons-hover-gold">
+                        --->
+                    </a>
+                    <a href="#" class="c-portfolio-footer-social-media-links-gitHub">
+                        <!---<img src="img/githubHub.svg" alt="svg social media links github" class="c-portfolio-footer-svg-icons">
+                        <img src="img/githubGoldHover.svg" alt="svg social media links github" class="c-portfolio-footer-svg-icons-hover-gold">
+                        --->
+                    </a>
+                </div>
+                <p class="c-portfolio-footer-desc">Copyright ©2021 M Crawley</p>
+            </div>
+        </section>
+    </div>
+    </svg>
+</body>
+
+</html>

@@ -1,2 +1,1 @@
-# myPortfolio
-This is me beginning to create my portfolio for future web development roles
+# My porfolio for future web development employment 

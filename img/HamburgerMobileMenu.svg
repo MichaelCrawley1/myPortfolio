@@ -1,0 +1,21 @@
+<svg id="HamburgerMobileMenu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="23" viewBox="0 0 30 23">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="30" height="23" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Repeat_Grid_1" data-name="Repeat Grid 1" clip-path="url(#clip-path)">
+    <g transform="translate(-15 -18.5)">
+      <line id="Line_1" data-name="Line 1" x2="30" transform="translate(15 23.5)" fill="none" stroke="#a29e9e" stroke-width="2"/>
+    </g>
+    <g transform="translate(-15 -11.5)">
+      <line id="Line_1-2" data-name="Line 1" x2="30" transform="translate(15 23.5)" fill="none" stroke="#a29e9e" stroke-width="2"/>
+    </g>
+    <g transform="translate(-15 -4.5)">
+      <line id="Line_1-3" data-name="Line 1" x2="30" transform="translate(15 23.5)" fill="none" stroke="#a29e9e" stroke-width="2"/>
+    </g>
+    <g transform="translate(-15 2.5)">
+      <line id="Line_1-4" data-name="Line 1" x2="30" transform="translate(15 23.5)" fill="none" stroke="#a29e9e" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
