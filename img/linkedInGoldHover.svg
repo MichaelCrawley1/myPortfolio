@@ -1,0 +1,10 @@
+<svg id="Component_26_1" data-name="Component 26 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54" height="49" viewBox="0 0 51 47">
+    <defs>
+        <clipPath id="clip-path">
+            <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="25.5" cy="23.5" rx="25.5" ry="23.5" transform="translate(108 3403)" fill="#b9b9b9" stroke="#707070" stroke-width="1" />
+        </clipPath>
+    </defs>
+    <g id="Group_1" data-name="Group 1" transform="translate(-108 -3403)" clip-path="url(#clip-path)">
+        <path id="_010-linkedin" data-name="010-linkedin" d="M23.5,0A23.5,23.5,0,1,0,47,23.5,23.5,23.5,0,0,0,23.5,0ZM16.671,35.525H10.948V18.307h5.723ZM13.81,15.955h-.037a2.983,2.983,0,1,1,.075-5.95,2.984,2.984,0,1,1-.038,5.95Zm23.5,19.57H31.586V26.314c0-2.315-.829-3.894-2.9-3.894a3.133,3.133,0,0,0-2.936,2.093,3.919,3.919,0,0,0-.188,1.4v9.616H19.839s.075-15.6,0-17.219h5.723v2.438A5.682,5.682,0,0,1,30.719,17.9c3.765,0,6.589,2.461,6.589,7.75Zm0,0" transform="translate(110 3403)" fill="#fff3b7" />
+    </g>
+</svg>
