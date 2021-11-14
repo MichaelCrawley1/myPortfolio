@@ -53,12 +53,18 @@
          }, false);
 
 
-         console.log(subsequentClass.children[1].children[1]);
+
 
          // this this uses the parent of the modals to bubble down to the exit button
          // we need click, this is the exit button below
 
-         let linkOutOfModal = subsequentClass.children[1].children[1];
+         let intoSectionHeader = subsequentClass.children[0];
+
+         console.log(intoSectionHeader);
+         console.log(intoSectionHeader.children[0]);
+
+         let intoDivContainerThatHoldsEscapeButton = intoSectionHeader.children[0];
+         let linkOutOfModal = intoDivContainerThatHoldsEscapeButton.children[0];
 
          linkOutOfModal.addEventListener("click", modalExit, false);
 
@@ -77,21 +83,24 @@
          console.log(modalOutTarget);
          console.log(modalOutTarget.parentElement.parentElement);
 
+
          // below is us travelling back up the dom in the reverse order of the
          // linkOutModal variable in the modalPopUp event.
 
          let modalOutTargetGrandfather = modalOutTarget.parentElement.parentElement;
 
+         let modalOutTargetGreatGreatGrandfather = modalOutTargetGrandfather.parentElement.parentElement;
+
          //modalOutTargetGrandfather.classList.remove("c-pop-up-project-display");//
 
 
 
-         modalOutTargetGrandfather.style.animation = "smoothPopOut 1000ms forwards";
+         modalOutTargetGreatGreatGrandfather.style.animation = "smoothPopOut 1000ms forwards";
 
          // below we wait for the animation to end before we do something, in this
          // case take out the helper class displaying the grid. 
 
-         modalOutTargetGrandfather.addEventListener("animationend", animateOut, false);
+         modalOutTargetGreatGreatGrandfather.addEventListener("animationend", animateOut, false);
 
 
 
