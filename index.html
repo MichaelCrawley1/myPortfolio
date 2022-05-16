@@ -64,7 +64,7 @@
             </div>
             <header class="c-hero-heading h-flex">
                 <h1 class="c-hero-portfolio-title">
-                    Web development <br><span class="c-hero-portfolio-title-gold">Portfolio</span><br>Michael Crawley
+                    Web development <br><span class="c-hero-portfolio-title-gold">Portfolio</span><br>Michael Crawley MSc BA
                 </h1>
             </header>
         </section>
@@ -402,19 +402,18 @@
         <section class="c-contact h-grid" id="contactFormSection">
             <div class="c-contact-flex-container h-flex">
                 <h1 class="c-contact-title">Contact Me</h1>
-                <form action="#" class="c-contact-form">
+                <form action="POST" class="c-contact-form" method="POST" data-netlify="true">
                     <label for="firstName" class="c-contact-label">
                         full name: <span class="c-contact-label-star">*</span>
-                        <input placeholder="John Doe" type="text" class="c-contact-form-input" id="test">
+                        <input placeholder="John Doe" type="text" class="c-contact-form-input" id="test" name="name">
                     </label>
                     <label for="email" class="c-contact-label">
                         email: <span class="c-contact-label-star">*</span>
-                        <input placeholder="john.doe@gmail.com" type="text" class="c-contact-form-input">
+                        <input placeholder="john.doe@gmail.com" type="text" class="c-contact-form-input" name="email">
                     </label>
                     <label for="message" class="c-contact-label">
                         message: <span class="c-contact-label-star">*</span>
-                        <textarea placeholder="Please help me design and develop my
-                                        website……." id="" cols="30" rows="10" class="c-contact-form-message-input"></textarea>
+                        <textarea placeholder="Please help me design and develop my website……." id="" cols="30" rows="10" class="c-contact-form-message-input" name="message"></textarea>
                     </label>
                     <button type="submit" class="c-contact-button">send</button>
                 </form>
