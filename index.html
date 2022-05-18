@@ -13,6 +13,7 @@
     <script src="js/main.js" defer></script>
     <script src="js/modalPopUp.js" defer></script>
     <script src="js/codeMessageCheck.js" defer></script>
+    
 </head>
 
 <body>
@@ -121,12 +122,22 @@
                 <h1 class="c-letters-skills-paragraph-heading-title">Hi, I’m Michael. Nice to meet you.</h1>
             </div>
             <div class="c-letters-skills-paragraph-text h-flex">
-                <p class="c-letters-skills-paragraph-text-desc">I am a Glasgow-based front end web developer with over 15 years experience working as both a freelancer, and in an agency environment. I am passionate about what I do, i'm one of those lucky people who loves their job and I like to think that reflects in the quality of my work.</p>
-                <p class="c-letters-skills-paragraph-text-desc">Creating efficient, fast and user-friendly websites is every bit as important to me as creating beautiful, hand-crafted designs. Usability, speed and aesthetics are all high priorities to me when developing and designing. Every project I build is a mobile responsive website, so your content will always be served in the best possible way to your audience, and every site is built with Wordpress at it's very core, so the content is all editable by you!
+                <p class="c-letters-skills-paragraph-text-desc">Having recently got my masters in mobile and web development my aim now is to get commercial experience as a software developer.  My development journey thus far has been one of deep learning of the LAMP stack with core UI skills of HTML CSS and Javascript.  Everything that has been developed has been with all core languages with no frameworks used.  That is way my university cohorts and I were taught therefore it made sense to carry on with that method of learning.  This doesn't mean I am framework averse, on the contrary, it is more of a preparation of what I progress to next.  Knowing the core language underneath the framework, serves one best when it comes to deciphering the inevitable error and bugs during the development iteration cycles.   </p>
+                <p class="c-letters-skills-paragraph-text-desc">The stage I am at now is that I am able to create a website application from design stage via adobe XD to create compelling visual wireframes that I can also develop and code into a aesthetically appealing and user-friendly user Interface (UI).  This is know as a static website.  My portfolio site you are visiting is a one such site with for api plug in via netlify so you can send me mail via the contact form below.  However I can take that static build one step further and also make it dynamic by building and connecting the data to a database then using a, 'back-end' programming language to communicate with said database so one can create, delete, update or delete their website data, knows as a CRUD application.  View the Metallica project down below in the, 'My Work' section for a relevant example.   
                 </p>
-                <p class="c-letters-skills-paragraph-text-desc">My Macbook Pro is possibly the most important non-living thing in my life, it allows me to work for you no matter where in the world that I may be at that time. Equally, just because you may not be in Glasgow, doesn't mean we couldn't work together; i've got many clients across Europe, from London to Berlin and I even do the odd bit of work for some friendly Americans!
+                <p class="c-letters-skills-paragraph-text-desc">  I feel I am ready to develop my coding skills further by becoming employed or contracted out as a full-stack web developer.  Feel free to contact me via the form for your web development needs.  I look forward to working with you.
                 </p>
-                <p class="c-letters-skills-paragraph-text-desc c-letters-skills-paragraph-text-desc--padding-bottom">If you’re looking for a brochure web site to be designed and developed, or a powerful, yet lightweight e-commerce system, then these are just some of the web design; development services that I offer. Or if you’re simply looking for someone to assist with an existing site, or you feel that your site is slow and needs looked at to optimise it for speed purposes then I can help with that too.</p>
+
+                <p class="c-letters-skills-paragraph-text-desc c-letters-skills-paragraph-text-desc--bold">
+                    Kindest regards
+
+                </p>
+
+                 <p class="c-letters-skills-paragraph-text-desc c-letters-skills-paragraph-text-desc--bold">
+                   Michael
+                    
+                </p>
+               
             </div>
         </section>
         <section class="c-portfolio-modal h-grid" id="portfolioModalSection">
@@ -405,15 +416,15 @@
                 <form action="POST" class="c-contact-form" method="POST" data-netlify="true">
                     <label for="firstName" class="c-contact-label">
                         full name: <span class="c-contact-label-star">*</span>
-                        <input placeholder="John Doe" type="text" class="c-contact-form-input" id="test" name="name">
+                        <input placeholder="John Doe" type="text" class="c-contact-form-input c-js-contact-form-input--name " id="test" name="name"  pattern="[a-zA-Z]+ [a-zA-Z]+|[a-zA-Z]+ [a-zA-Z]+ " Title="Please write full name with one space between names (no Middle Names)!" required>
                     </label>
                     <label for="email" class="c-contact-label">
                         email: <span class="c-contact-label-star">*</span>
-                        <input placeholder="john.doe@gmail.com" type="text" class="c-contact-form-input" name="email">
+                        <input placeholder="john.doe@gmail.com" type="email" class="c-contact-form-input c-js-contact-form-input--email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please write in proper email address!" required >
                     </label>
                     <label for="message" class="c-contact-label">
                         message: <span class="c-contact-label-star">*</span>
-                        <textarea placeholder="Please help me design and develop my website……." id="" cols="30" rows="10" class="c-contact-form-message-input" name="message"></textarea>
+                        <textarea placeholder="Please help me design and develop my website……." id="" cols="30" rows="10" class="c-contact-form-message-input c-js-contact-form-message-input--message" minlength="20" name="message" title="At least minimum of 20 characters to qualify for a suitable message." required></textarea>
                     </label>
                     <button type="submit" class="c-contact-button">send</button>
                 </form>
@@ -423,15 +434,11 @@
             <div class="c-portfolio-footer-flex-container h-flex">
                 <p class="c-portfolio-footer-desc">Follow me on social Media</p>
                 <div class="c-portfolio-footer-svg-container">
-                    <a href="#" class="c-portfolio-footer-social-media-links-linkedIn">
-                        <!---<img src="img/linkedIn.svg" alt="svg social media links linked in" class="c-portfolio-footer-svg-icons">
-                                        <img src="img/linkedInGoldHover.svg" alt="svg social media links github" class="c-portfolio-footer-svg-icons-hover-gold">
-                                        --->
+                    <a href="https://www.linkedin.com/in/michael-crawley-5235b555" class="c-portfolio-footer-social-media-links-linkedIn">
+                       
                     </a>
-                    <a href="#" class="c-portfolio-footer-social-media-links-gitHub">
-                        <!---<img src="img/githubHub.svg" alt="svg social media links github" class="c-portfolio-footer-svg-icons">
-                                        <img src="img/githubGoldHover.svg" alt="svg social media links github" class="c-portfolio-footer-svg-icons-hover-gold">
-                                        --->
+                    <a href="https://github.com/MichaelCrawley1/myPortfolio" class="c-portfolio-footer-social-media-links-gitHub">
+                      
                     </a>
                 </div>
                 <p class="c-portfolio-footer-desc">Copyright ©2021 M Crawley</p>
