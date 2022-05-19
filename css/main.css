@@ -1402,6 +1402,9 @@ textarea {
 .c-contact-form-message-input:focus {
   outline: solid 2px #000000; }
 
+.c-contact-form-input-honeypot-display-none {
+  display: none; }
+
 .c-portfolio-footer {
   grid-template-columns: 15% 1fr 15%;
   background-color: #222222; }
@@ -1461,3 +1464,77 @@ textarea {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
+
+.c-form-success {
+  background-color: #E0E0E0;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center; }
+
+.c-form-success-paragraph {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #646464; }
+  @media (min-width: 65rem) {
+    .c-form-success-paragraph {
+      font-size: 2.2rem; } }
+
+.c-form-success-paragraph--padding-bottom {
+  padding-bottom: 4em; }
+
+.c-form-success-paragraph-heading-title {
+  font-size: 3.6rem;
+  line-height: 1.3;
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: .05em;
+  text-transform: capitalize; }
+  @media (min-width: 53.1875rem) {
+    .c-form-success-paragraph-heading-title {
+      font-size: 5.6rem; } }
+
+.c-form-success-paragraph-heading-title::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #ceb747;
+  width: 90%;
+  margin: 1em auto 0em; }
+
+.c-form-success-button {
+  margin-top: 10rem;
+  display: block;
+  font-size: 3.1rem;
+  background-color: #000000;
+  width: 13.9rem;
+  height: 6.1rem;
+  color: #fff3b7;
+  text-transform: uppercase;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: .05em; }
+
+.c-form-success-button:hover {
+  color: #ffeb84; }
+
+.c-form-success-img-home-arrow-svg {
+  height: 0.8em;
+  transform: rotate(90deg);
+  display: inline-block;
+  margin-left: 0.3em;
+  position: relative;
+  left: -0.2em;
+  top: 0.05em; }
+
+.c-form-success-link-to-home::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
