@@ -923,9 +923,15 @@ textarea {
       grid-row: 2 / 2; } }
 
 .c-letters-skills-paragraph-text-desc {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 400;
   color: #646464; }
+  @media (min-width: 31.25rem) {
+    .c-letters-skills-paragraph-text-desc {
+      font-size: 1.8rem; } }
+  @media (min-width: 48rem) {
+    .c-letters-skills-paragraph-text-desc {
+      font-size: 2rem; } }
   @media (min-width: 65rem) {
     .c-letters-skills-paragraph-text-desc {
       font-size: 2.2rem; } }
