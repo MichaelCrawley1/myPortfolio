@@ -481,7 +481,7 @@ textarea {
 
 .c-hero-layer-for-fat-fingers-mobile {
   position: relative;
-  padding: .5em;
+  padding: 0.2em .5em .5em .5em;
   grid-column: 1 / 2;
   left: 6.9em; }
   @media (min-width: 25.3125rem) {
@@ -490,15 +490,24 @@ textarea {
   @media (min-width: 30rem) {
     .c-hero-layer-for-fat-fingers-mobile {
       left: 7.5em; } }
+  @media (min-width: 35.9375rem) {
+    .c-hero-layer-for-fat-fingers-mobile {
+      left: 7.7em; } }
   @media (min-width: 40.375rem) {
     .c-hero-layer-for-fat-fingers-mobile {
       left: 8.2em; } }
+  @media (min-width: 51.25rem) {
+    .c-hero-layer-for-fat-fingers-mobile {
+      left: 8.5em; } }
   @media (min-width: 58.5625rem) {
     .c-hero-layer-for-fat-fingers-mobile {
       left: 8.9em; } }
   @media (min-width: 70.1875rem) {
     .c-hero-layer-for-fat-fingers-mobile {
       left: 9.5em; } }
+  @media (min-width: 75.5625rem) {
+    .c-hero-layer-for-fat-fingers-mobile {
+      left: 9.8em; } }
 
 .c-hero-hamburger-link::after {
   content: "";
@@ -691,10 +700,10 @@ textarea {
 
 .c-mobile-nav-hamburger-exit-container {
   text-align: left;
-  justify-self: start;
+  justify-self: end;
   align-self: start;
   padding-top: .1em;
-  padding-left: .2em;
+  padding-right: .1em;
   position: relative; }
 
 .c-mobile-nav-hamburger-exit-container-link::after {
@@ -703,7 +712,7 @@ textarea {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
+  left: -2em;
   right: 0;
   padding: .8em;
   border: 2px solid pink;
@@ -916,7 +925,8 @@ textarea {
 .c-letters-skills-paragraph-text {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
-  flex-direction: column; }
+  flex-direction: column;
+  padding-bottom: 4em; }
   @media (min-width: 53.1875rem) {
     .c-letters-skills-paragraph-text {
       grid-column: 2 / 3;
@@ -1019,7 +1029,7 @@ textarea {
   background-position: center; }
 
 .c-portfolio-modal-grid-background-img-metallica {
-  background-image: url(../img/metallica.jpeg);
+  background-image: url(../img/australia.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
@@ -1142,7 +1152,7 @@ textarea {
   background-position: center; }
 
 .c-pop-up-project-header-background-image-metallica {
-  background-image: url(../img/metallica.jpeg);
+  background-image: url(../img/black-album-hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
