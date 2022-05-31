@@ -1054,15 +1054,15 @@ textarea {
   background-position: center; }
 
 @media (hover: hover) and (pointer: fine) {
-  .c-portfolio-modal-grid-background-img-uws:hover .c-portfolio-modal-grid-hover-effect, .c-portfolio-modal-grid-background-img-uws:active .c-portfolio-modal-grid-hover-effect, .c-portfolio-modal-grid-background-img-uws:focus .c-portfolio-modal-grid-hover-effect {
+  .c-portfolio-modal-grid-background-img-uws:hover .c-portfolio-modal-grid-hover-effect {
     top: 0; }
-  .c-portfolio-modal-grid-background-img-metallica:hover .c-portfolio-modal-grid-hover-effect, .c-portfolio-modal-grid-background-img-metallica:active .c-portfolio-modal-grid-hover-effect, .c-portfolio-modal-grid-background-img-metallica:focus .c-portfolio-modal-grid-hover-effect {
+  .c-portfolio-modal-grid-background-img-metallica:hover .c-portfolio-modal-grid-hover-effect {
     top: 0; }
-  .c-portfolio-modal-grid-background-img-tomeStory:hover .c-portfolio-modal-grid-hover-effect, .c-portfolio-modal-grid-background-img-tomeStory:active .c-portfolio-modal-grid-hover-effect, .c-portfolio-modal-grid-background-img-tomeStory:focus .c-portfolio-modal-grid-hover-effect {
+  .c-portfolio-modal-grid-background-img-tomeStory:hover .c-portfolio-modal-grid-hover-effect {
     top: 0; }
-  .c-portfolio-modal-grid-background-img-movies:hover .c-portfolio-modal-grid-hover-effect, .c-portfolio-modal-grid-background-img-movies:active .c-portfolio-modal-grid-hover-effect, .c-portfolio-modal-grid-background-img-movies:focus .c-portfolio-modal-grid-hover-effect {
+  .c-portfolio-modal-grid-background-img-movies:hover .c-portfolio-modal-grid-hover-effect {
     top: 0; }
-  .c-portfolio-modal-grid-background-img-britishGas:hover .c-portfolio-modal-grid-hover-effect, .c-portfolio-modal-grid-background-img-britishGas:active .c-portfolio-modal-grid-hover-effect, .c-portfolio-modal-grid-background-img-britishGas:focus .c-portfolio-modal-grid-hover-effect {
+  .c-portfolio-modal-grid-background-img-britishGas:hover .c-portfolio-modal-grid-hover-effect {
     top: 0; } }
 
 .c-portfolio-modal-grid-hover-effect {
