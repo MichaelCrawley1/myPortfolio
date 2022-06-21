@@ -1285,7 +1285,8 @@ textarea {
   font-size: 1.8rem;
   padding: 0 .5em;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  margin: 0 auto; }
   @media (min-width: 22.1875rem) {
     .c-pop-up-project-content-wrapper {
       padding: 0 1em; } }
