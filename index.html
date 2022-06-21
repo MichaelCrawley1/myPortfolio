@@ -17,436 +17,1529 @@
 </head>
 
 <body>
-    <!---html classes will be set up using the Block Element Modifier (BEM) styled system.  My method will involve letters with dashes (-) as a prefix to enabled the reader to understand if a section of code is a component or a layout element.  Glossary is displayed below:
+  <!---html classes will be set up using the Block Element Modifier (BEM) styled system.  My method will involve letters with dashes (-) as a prefix to enable the reader to understand if a section of code is a component or a layout element.  Glossary is displayed below:
+
         c- = this equals a component that is likely to get reused
         l- = this equals a class that acts as block layout like a reusable container for example
         h- = the h prefix is to signify helper classes like clearfix to get elements back in the html document flow
         js- = this is to signify when we need to use JavaScript on an block or a block element to bring in dynamic functionality.
         c-js- = will refer to both components and components that rely on JavaScript functionality
-        c-mq- = could be for media queries.
-        In addition, throughout this document there will be a comment that says, 'modifier here, please see css comments for what this does or what it is for'.  This way by using the find search tool provided by the editor we can quickly find the modifier we are looking for.  Might be an advantage to say for media queries too.
+        c-mq- = will be for media queries.
+
+        In addition, throughout this document there will be a comment that says, "MODIFIER HERE, PLEASE SEE CSS COMMENTS FOR WHAT THIS DOES OR WHAT IT IS FOR".  By using the find search tool provided by the editor (control or command F) we can quickly find the modifier we are looking for and then look at the corresponding css file to see what it does.  
         ---->
-    <!--This section has the nav menus for the mobile screen and desktop screen using display: flex and grid for some drop down columns--->
-    <!---the header section---->
-    <div class="l-basic-grid">
+
+        <!-----AND EXPLANATION OF THE CSS GRID SYSTEM USED BELOW---->
+
+
+        <!---below is the class of the standard grid and is for rows only (this is used for the vertical layout of the pages), each row is to correspond with a new section of the html.  By using the grid system this way rather than rows and columns from the beginning, helps to keep the html semantic. Alternatively, using the grid for rows and columns at the beginning of the design means the html will have to be flattened for it to work.  When the, 'subgrid' property becomes more widespread with browsers perhaps this will not need to be the case, but for now, a grid for rows only for the vertical layout and then horizontal grids in each section thereafter if the need arises to keep it semantic----> 
+
+
+
+         <div class="l-basic-grid">
+
+    
+    <!-- FIRST COLUMN GRID WITH HERO IMAGE -->
+
+    <!-- this section class does quite a lot here, first it has three columns with 5% margin column sections and with 3 fixed ratio rows grid.  It also has the hero image displayed as a background with 83% opacity to make it easier to write over.  Lastly it has a individual property of grid column: 1/-1 to stretch the hero over all the column sections.  The background colour of black takes the original hero image and gives it the colour effect we need.  Lastly it has an id of heroHome to make the scroll effect work from the mobile and the desktop menu layouts when the anchor tags are pressed   -->
+   
         <section class="c-hero h-grid" id="heroHome">
             <!-- this is the code block that does the alert pop up message to check the code for this portfolio on gitHub -->
             <!-- PORTFOLIO GITHUB CODE MESSAGE -->
-
-
+            <!-- this class uses position absolute on the account that it is relative to the body tag, so we can accurately place this bespoke alert message just above the hero title.  It is centred using the margin 0 auto technique and it has a max width of 900px.  It has  a little bit of opacity on it.  There is a helper flex on it to place the paragraph text and the exit mark, 'X' together  -->
             <div class="c-code-message-check h-flex">
+
+                <!-- this flex item has a media query of flex grow of 1 on it to push the next element exit, 'X' to the far end of the container when the container reaches its full size, also for both paragraph items it has margins, font sizes and to take out the max width on the base paragraph technique so when the screen gets smaller the paragraph doesn't, 'curl up'  -->
                 <p class="c-code-message-check-desc">If you are curious to check the github code for this custom portfolio please
-                    <a href="https://github.com/MichaelCrawley1/myPortfolio" target="_blank" class="c-code-message-check-links"> click here </a></p>
-                <p class="c-code-message-check-desc c-code-message-check-desc--align-end h-flex "><img src="img/xGitHubMessagePortfolio.svg" alt="" class="c-code-message-check-x-img ">
-                <a href="#" class="c-code-message-check-close-message"></a></p>
+
+                    <!-- just a colour inherit so the links looks like the paragraph text -->
+                    <a href="https://github.com/MichaelCrawley1/myPortfolio" target="_blank" class="c-code-message-check-links"> click here </a>
+                    <!-- END OF just a colour inherit so the links looks like the paragraph text -->
+                </p>
+
+           <!-- END OF this flex item has a media query of flex grow of 1 on it to push the next element exit, 'X' to the far END OF the container when the container reaches its full size, also for both paragraph items it has margins, font sizes and to take out the max width on the base paragraph technique so when the screen gets smaller the paragraph doesn't, 'curl up'  -->
+
+
+
+           <!-- MODIFIER HERE -->
+
+           <!-- this paragraph has a position relative on it as it acts as the exit's, 'X' container so the x can be positioned in the top left hand corner with flex-end property and a small width of 20% -->
+                <p class="c-code-message-check-desc c-code-message-check-desc--align-end h-flex ">
+
+                    <!-- this is really just a semantic image class but the fact it is a svg we can size it the way we want, so we have a max-width of 17.5px to make it a small exit, "X" -->
+                    <img src="img/xGitHubMessagePortfolio.svg" alt="" class="c-code-message-check-x-img ">
+
+                      <!-- END OF this is really just a semantic image class but the fact it is a svg we can size it the way we want, so we have a max-width of 17.5px to make it a small exit, "X" -->
+
+                      <!-- This is my usual BBCtechnique for giving more space to the user with, 'fat-fingers' to click out of the X.  It uses the pseudo class after or before with position absolute to the position relative of the paragraph parent  -->
+                <a href="#" class="c-code-message-check-close-message"></a>
+
+                   <!-- END OF This is my usual BBCtechnique for giving more space to the user with, 'fat-fingers' to click out of the X.  It uses the pseudo class after or before with position absolute to the position relative of the paragraph parent  -->
+
+
+            </p>
+
+               <!-- END OF MODIFIER HERE -->
+
+           <!-- END OF this paragraph has a position relative on it as it acts as the exit's, 'X' container so the x can be positioned in the top left hand corner with flex-end property and a small width of 20% -->
                 
             </div>
-            <!-- end of the code block that does the alert pop up message to check the code for this portfolio on gitHub -->
+            <!-- END OF the code block that does the alert pop up message to check the code for this portfolio on gitHub -->
             <!-- END OF PORTFOLIO GITHUB CODE MESSAGE -->
-            <!--- this is the hamburger menu system until 900 pixels---->
+             <!-- END OF this class uses position absolute on the account that it is relative to the body tag, so we can accurately place this bespoke alert message just above the hero title.  It is centred using the margin 0 auto technique and it has a max width of 900px.  It has  a little bit of opacity on it.  There is a helper flex on it to place the paragraph text and the exit mark, 'X' together  -->
+
+
+
+             <!-- THE MOBILE HAMBURGER ICON -->
+            <!--- this is the hamburger icon until 1400 pixels width---->
+            <!-- This has a justify-self end and align-self start to have the container near the top right hand corner.  Also though in that corner section it has a small 3 corner grid so we can border this whole container for better UX when clicking with the anchor tag and so our child can use the grid-column property to move closer to the corner -->
             <div class="c-hero-svg-container h-grid">
+                <!-- because of the above parent properties all we need to do here is have a position relative with the grid column property (to the hero section parent) and then manoeuvrer the left property with media queries to keep the hamburger tight in the corner -->
                 <div class="c-hero-layer-for-fat-fingers-mobile ">
+
+                    <!-- just a semantic link but with the BBC pseudo technique to stretch out the click space for a better UX -->
                     <a href="#" class="c-hero-hamburger-link">
+
+                        <!-- just a semantic img tag with the svg size that was worked out in adobe XD design -->
                         <img src="img/HamburgerMobileMenu.svg" alt="a hamburger svg icon" class="c-hero-hamburger-svg">
+                          <!-- END OF just a semantic img tag with the svg size that was worked out in adobe XD design -->
+
                     </a>
+                       <!-- END OF just a semantic link but with the BBC pseudo technique to stretch out the click space for a better UX -->
+
                 </div>
+
+                   <!-- END OF the above parent properties all we need to do here is have a position relative with the grid column property (to the hero section parent) and then manoeuvrer the left property with media queries to keep the hamburger tight in the corner -->
             </div>
-            <!--- end of the hamburger mobile menu system ---->
-            <!--- this is the desktop menu system displaying at 900 pixels --->
+
+              <!-- END OF THE MOBILE HAMBURGER ICON -->
+            <!--- END OF this is the hamburger icon until 1400 pixels width---->
+         <!-- END OF The justify-self end and align-self start to have the container near the top right hand corner.  Also though in that corner section it has a small 3 corner grid so we can border this whole container for better UX when clicking with the anchor tag and so our child can use the grid-column property to move closer to the corner -->
+            
+
+            <!-- THE DESKTOP MENU SYSTEM displaying at 1400 pixels -->
+
+          <!-- the hero section here is still the grid parent so we just need to do grid column : 1/-1 to get access to the whole first column space from left to right.  There is a display block on it just to bring the menu back as it is display none for the mobile hamburger icon -->
             <div class="c-hero-desktop-nav-menu ">
+                <!-- just a semantic nav element -->
                 <nav class="c-hero-desktop-nav ">
+                    <!-- this has a display flex on it so we can access the flex -end property to move the nav menu to the right hand side just like the hamburger icon was.  This property also has a few styles on it. -->
                     <ul class="c-hero-desktop-nav-list h-flex">
-                        <li class="c-hero-desktop-nav-list-item"><a href="#heroHome" class="c-hero-desktop-nav-list-item-link">Home</a></li>
-                        <li class="c-hero-desktop-nav-list-item"><a href="#aboutMeInnerLink" class="c-hero-desktop-nav-list-item-link">about</a></li>
-                        <li class="c-hero-desktop-nav-list-item"><a href="#portfolioModalSection" class="c-hero-desktop-nav-list-item-link">Portfolio</a></li>
-                        <li class="c-hero-desktop-nav-list-item"><a href="#contactFormSection" class="c-hero-desktop-nav-list-item-link">Contact</a></li>
+
+                        <!-- just really a semantic list item with padding to space out the individual nav items -->
+                        <li class="c-hero-desktop-nav-list-item">
+                            <!-- just a few styles the opacity works well here -->
+                            <a href="#heroHome" class="c-hero-desktop-nav-list-item-link">Home</a>
+                             <!-- END OF just a few styles the opacity works well here -->
+
+                        </li>
+                           <!-- END OF just really a semantic list item with padding to space out the individual nav items -->
+
+                             <!-- just really a semantic list item with padding to space out the individual nav items -->
+                        <li class="c-hero-desktop-nav-list-item">
+                              <!-- just a few styles the opacity works well here -->
+                            <a href="#aboutMeInnerLink" class="c-hero-desktop-nav-list-item-link">about</a>
+                             <!-- END OF just a few styles the opacity works well here -->
+                        </li>
+
+                         <!-- END OF just really a semantic list item with padding to space out the individual nav items -->
+
+                          <!-- just really a semantic list item with padding to space out the individual nav items -->
+                        <li class="c-hero-desktop-nav-list-item">
+                             <!-- just a few styles the opacity works well here -->
+                            <a href="#portfolioModalSection" class="c-hero-desktop-nav-list-item-link">Portfolio</a>
+
+                             <!-- END OF just a few styles the opacity works well here -->
+                        </li>
+
+                         <!-- END OF just really a semantic list item with padding to space out the individual nav items -->
+
+                          <!-- just really a semantic list item with padding to space out the individual nav items -->
+                        <li class="c-hero-desktop-nav-list-item">
+
+                             <!-- just a few styles the opacity works well here -->
+                            <a href="#contactFormSection" class="c-hero-desktop-nav-list-item-link">Contact</a>
+                             <!-- END OF just a few styles the opacity works well here -->
+
+                        </li>
+
+                         <!-- END OF just really a semantic list item with padding to space out the individual nav items -->
                     </ul>
+
+                      <!-- END OF this has a display flex on it so we can access the flex -end property to move the nav menu to the right hand side just like the hamburger icon was.  This property also has a few styles on it. -->
                 </nav>
+                 <!-- END OF just a semantic nav element -->
+
             </div>
+
+             <!-- END OF the hero section here is still the grid parent so we just need to do grid column : 1/-1 to get access to the whole first column space from left to right.  There is a display block on it just to bring the menu back as it is display none for the mobile hamburger icon -->
+   <!-- END OF THE DESKTOP MENU SYSTEM displaying at 1400 pixels -->
+
+         
+   <!-- THIS IS THE TITLE TEXT IN THE CENTRE OF THE PAGE -->
+   <!-- the grid column property is helpful here to centre the text then in that column we do align and justify centre flex properties to keep it tight in the centre -->
             <header class="c-hero-heading h-flex">
+                <!-- text-align centre is helpful here and media queries to change size of text  at different screen sizes  -->
+                <!-- there is a pseudo before and after on this element so we can put a horizontal divider top and bottom -->
                 <h1 class="c-hero-portfolio-title">
-                    Web development <br><span class="c-hero-portfolio-title-gold">Portfolio</span><br>Michael Crawley MSc BA
+
+                    Web development <br/>
+
+                    <!-- this span class makes enables us to change the font and style, text-indent and display: inline-block seems to be important here to make this heading look centred, also line height of 2 spaces out equally the text above and below it -->
+                    <span class="c-hero-portfolio-title-gold">Portfolio</span><br>Michael Crawley MSc BA
+                      <!-- END OF this span class makes enables us to change the font and style, text-indent and display: inline-block seems to be important here to make this heading look centred, also line height of 2 spaces out equally the text above and below it -->
                 </h1>
+                 <!-- END OF a pseudo before and after on this element so we can put a horizontal divider top and bottom -->
+                <!-- END OF text-align centre is helpful here and media queries to change size of text  at different screen sizes  -->
             </header>
+
+             <!-- END OF the grid column property is helpful here to centre the text then in that column we do align and justify centre flex properties to keep it tight in the centre -->
+
+               <!-- END OF THIS IS THE TITLE TEXT IN THE CENTRE OF THE PAGE -->
         </section>
-        <!---here is way the mobile nav menu will go---->
+
+         <!-- END OF this section class that does quite a lot here, first it has three columns with 5% margin column sections and with 3 fixed ratio rows grid.  It also has the hero image displayed as a background with 83% opacity to make it easier to write over.  Lastly it has a individual property of grid column: 1/-1 to stretch the hero over all the column sections.  The background colour of black takes the original hero image and gives it the colour effect we need.  Lastly it has an id of heroHome to make the scroll effect work from the mobile and the desktop menu layouts when the anchor tags are pressed    -->
+
+         <!-- END OF THE FIRST COLUMN GRID WITH HERO IMAGE -->
+
+
+
+
+        <!---HERE IS WAY THE MOBILE NAV MENU WILL GO---->
+        <!-- this class when called by the click on the hamburger icon covers the hero page with position absolute. it just needs a left and right of 0, to bring it from the right to left we do translateX(100%) then add this class below to the layout grid class at the top with a translateX(0), there is a transition on this to give an animation effect too -->
         <div class="c-mobile-nav-container">
+            <!-- just a semantic nav class -->
             <nav class="c-mobile-nav-menu">
+                <!-- this class has a row grid on it only with a height of 100vh so the fr units are spread equally, because UL elements have padding and margin on as standard we have taken these out, there are other styles on this class too  -->
                 <ul class="c-mobile-nav-menu-list h-grid">
+                    <!-- these are grid items too to get access to the whole row from the parent grid then we can align and justify centre.  there is a  border on each of the items too and a position relative on it so the anchor tag can do its bbcTechnique. -->
                     <li class="c-mobile-nav-menu-list-item h-grid">
+                        <!-- this class just places the exit x on the top right hand corner, important properties are justify self end and align self start.  There is a position relative on it so that anchor can spread out more space with its bbc technique for more UX for people with thicker thumbs. -->
                         <div class="c-mobile-nav-hamburger-exit-container">
+                            <!-- bbcTechnique on pseudo on after with a z:index to take click priority to exit -->
                             <a href="#" class="c-mobile-nav-hamburger-exit-container-link">
+
+                                <!-- just a semantic img tag for the svg -->
                                 <img src="img/mobileHamburgerClose.svg" alt="and x mark to get back to menu screen" class="c-mobile-nav-exit-svg">
+                                <!-- END OF just a semantic img tag for the svg -->
                             </a>
-                        </div><a href="#heroHome" class="c-mobile-nav-menu-list-item-links">Home</a>
+                            <!-- END OF bbcTechnique on pseudo on after with a z:index to take click priority to exit -->
+                        </div>
+                         <!-- END OF this class just places the exit x on the top right hand corner, important properties are justify self end and align self start.  There is a position relative on it so that anchor can spread out more space with its bbc technique for more UX for people with thicker thumbs. -->
+
+
+                         <!-- colour brown on hover with the BBC pseudo technique to make the whole Li clickable -->
+                        <a href="#heroHome" class="c-mobile-nav-menu-list-item-links">Home</a>
+                          <!-- END OF the colour brown on hover with the BBC pseudo technique to make the whole Li clickable -->
+
                     </li>
-                    <li class="c-mobile-nav-menu-list-item h-grid"><a href="#aboutMeInnerLink" class="c-mobile-nav-menu-list-item-links">about</a></li>
-                    <li class="c-mobile-nav-menu-list-item h-grid"><a href="#portfolioModalSection" class="c-mobile-nav-menu-list-item-links">portfolio</a></li>
-                    <li class="c-mobile-nav-menu-list-item h-grid c-mobile-nav-menu-list-item--no-border "><a href="#contactFormSection" class="c-mobile-nav-menu-list-item-links">contact</a></li>
+                     <!-- END OF THESE grid items too to get access to the whole row from the parent grid then we can align and justify centre.  there is a  border on each of the items too and a position relative on it so the anchor tag can do its bbcTechnique. -->
+
+                      <!-- these are grid items too to get access to the whole row from the parent grid then we can align and justify centre.  there is a  border on each of the items too and a position relative on it so the anchor tag can do its bbcTechnique. -->
+                    <li class="c-mobile-nav-menu-list-item h-grid">
+                         <!-- colour brown on hover with the BBC pseudo technique to make the whole Li clickable -->
+                        <a href="#aboutMeInnerLink" class="c-mobile-nav-menu-list-item-links">about</a>
+                          <!-- END OF the colour brown on hover with the BBC pseudo technique to make the whole Li clickable -->
+
+
+
+                    </li>
+
+                       <!-- END OF THESE grid items too to get access to the whole row from the parent grid then we can align and justify centre.  there is a  border on each of the items too and a position relative on it so the anchor tag can do its bbcTechnique. -->
+
+                     <!-- these are grid items too to get access to the whole row from the parent grid then we can align and justify centre.  there is a  border on each of the items too and a position relative on it so the anchor tag can do its bbcTechnique. -->
+
+
+                    <li class="c-mobile-nav-menu-list-item h-grid">
+                           <!-- colour brown on hover with the BBC pseudo technique to make the whole Li clickable -->
+
+                        <a href="#portfolioModalSection" class="c-mobile-nav-menu-list-item-links">portfolio</a>
+                         <!-- END OF the colour brown on hover with the BBC pseudo technique to make the whole Li clickable -->
+
+                    </li>
+                     <!-- END OF THESE grid items too to get access to the whole row from the parent grid then we can align and justify centre.  there is a  border on each of the items too and a position relative on it so the anchor tag can do its bbcTechnique. -->
+
+                       <!-- these are grid items too to get access to the whole row from the parent grid then we can align and justify centre.  there is a  border on each of the items too and a position relative on it so the anchor tag can do its bbcTechnique. -->
+
+
+                    <li class="c-mobile-nav-menu-list-item h-grid c-mobile-nav-menu-list-item--no-border ">
+
+                         <!-- colour brown on hover with the BBC pseudo technique to make the whole Li clickable -->
+                        <a href="#contactFormSection" class="c-mobile-nav-menu-list-item-links">contact</a>
+                         <!-- END OF the colour brown on hover with the BBC pseudo technique to make the whole Li clickable -->
+                    </li>
+
+                    <!-- END OF THESE grid items too to get access to the whole row from the parent grid then we can align and justify centre.  there is a  border on each of the items too and a position relative on it so the anchor tag can do its bbcTechnique. -->
+
                 </ul>
+                  <!-- END OF this class has a row grid on it only with a height of 100vh so the fr units are spread equally, because UL elements have padding and margin on as standard we have taken these out, there are other styles on this class too  -->
             </nav>
+             <!--END OF this  semantic nav class -->
         </div>
-        <!----end of the mobile nav menu ----->
+        <!---END OF HERE IS WAY THE MOBILE NAV MENU WILL GO---->
+         <!-- END OF this class when called by the click on the hamburger icon covers the hero page with position absolute. it just needs a left and right of 0, to bring it from the right to left we do translateX(100%) then add this class below to the layout grid class at the top with a translateX(0), there is a transition on this to give an animation effect too -->
+
+
+
+       <!-- THE ABOUT ME SECTION -->
+       <!-- this section class has a three grid column with min max properties to look the best across all screen sizes with the id to help with the scrolling from the nav links be it mobile or desktop -->
         <section class="c-about-me h-grid" id="aboutMeInnerLink">
+            <!-- due the parent setting out the grid template columns we can then use the grid column property to place the images left and right of the video.  There is a great technique using after so we can put in the background colour with an opacity to make it look like a golden background  -->
             <div class="c-about-me-background-left"></div>
+             <!-- END OF due the parent setting out the grid template columns we can then use the grid column property to place the images left and right of the video.  There is a great technique using after so we can put in the background colour with an opacity to make it look like a golden background  -->
+             <!-- same idea for the centre it uses grid column to take the middle column with a background opacity and linear gradient for its nice grey effect -->
             <div class="c-about-me-background-centre">
+               <!-- styles for the heading and pseudo after for the underline-->
                 <h1 class="c-about-me-heading">About Me</h1>
+                 <!-- END OF styles for the heading and pseudo after for the underline-->
+                 <!-- this class has a flex on it with justify content: centre so we can centre the video image with changes in the height of the square per screen size -->
                 <div class="c-about-me-flex-container h-flex">
+                    <!-- just a semantic img tag -->
                     <img src="img/imageForVideo.png" class="c-about-me-video">
+                     <!-- END OF just a semantic img tag -->
+                     <!-- the inline svg for the play button -->
                     <svg id="PlayVideo" xmlns="http://www.w3.org/2000/svg" width="60" height="53" viewBox="0 0 60 53" class="c-about-me-play-icon">
                         <g id="Polygon_2" data-name="Polygon 2" transform="translate(60) rotate(90)" fill="#c1b88e">
                             <path d="M 52.23256683349609 59.5 L 0.7674344182014465 59.5 L 26.5 1.237587332725525 L 52.23256683349609 59.5 Z" stroke="none" />
                             <path d="M 26.5 2.475151062011719 L 1.534858703613281 59 L 51.46514129638672 59 L 26.5 2.475151062011719 M 26.5 0 L 53 60 L 0 60 L 26.5 0 Z" stroke="none" fill="#707070" />
                         </g>
                     </svg>
+                    <!-- END OF the inline svg for the play button -->
                 </div>
+                  <!-- END OF this class has a flex on it with justify content: centre so we can centre the video image with changes in the height of the square per screen size -->
             </div>
+             <!-- END OF the same idea for the centre it uses grid column to take the middle column with a background opacity and linear gradient for its nice grey effect -->
+             <!--  this class i s set to grid column: 3/4  to be place at the right of the video with the same as the first grid column with pseudo before to set the gold back ground colour -->
             <div class="c-about-me-background-right"></div>
+               <!--  END OF this class i s set to grid column: 3/4  to be place at the right of the video with the same as the first grid column with pseudo before to set the gold back ground colour -->
         </section>
+<!-- END OF this section class has a three grid column with min max properties to look the best across all screen sizes with the id to help with the scrolling from the nav links be it mobile or desktop -->
+ <!-- END OF THE ABOUT ME SECTION -->
+
+
+
+ <!-- THE LETTER SECTION -->
+    <!-- this is a 3 column grid at mobile size then changes to a 4 column grid at desktop size with the inside two columns not going past the 1300px max width for the content, there is also a grid gap on it too -->
         <section class="c-letter-skills h-grid">
+            <!-- this is the little list of skills with a writing pad background it uses the grid child properties and flex parent properties to centre itself properly in the grid column section -->
             <div class="c-letter-skills-content-center h-flex">
+                <!-- the few important properties to position this letter image and to make it look appealing are - max width and gold border and position relative on the big screen so we can move the letter image without upsetting the flow of the page, there is a transform rotate of 3 degrees on it too with the content on a rotate of 3 degrees too to get everything to tilt to the side the padding bottom also works too -->
                 <div class="c-letter-skills-image-letter"></div>
+                 <!-- END OF the few important properties to position this letter image and to make it look appealing are - max width and gold border and position relative on the big screen so we can move the letter image without upsetting the flow of the page, there is a transform rotate of 3 degrees on it too with the content on a rotate of 3 degrees too to get everything to tilt to the side the padding bottom also works too -->
+                 <!-- this class has position absolute which is relative to the section parent and the rotate of 3 degrees with margin and styles to fit in with the letter background image -->
                 <h5 class="c-letter-skills-title">Skills</h5>
+                  <!-- END OF this class has position absolute which is relative to the section parent and the rotate of 3 degrees with margin and styles to fit in with the letter background image -->
+                  <!-- similar to the class up above, position absolute and a rotate of 3 degrees, with a few width changes to fit in different screen sizes -->
                 <ul class="c-letter-skills-list">
+                    <!-- just a padding top to separate the list items -->
                     <li class="c-letter-skills-list-item">- Core Full-Stack of HTML5, CSS3, JavaScript with PHP & MySql</li>
+                      <!-- END OF just a padding top to separate the list items -->
+                      <!-- just a padding top to separate the list items -->
                     <li class="c-letter-skills-list-item">- JavaScript Libraries use with jQuery, Dojo Toolkit, MooTools, Ext.js</li>
+                     <!-- END OF just a padding top to separate the list items -->
+                      <!-- just a padding top to separate the list items -->
                     <li class="c-letter-skills-list-item">- Developed responsive websites using SASS (CSS pre-processor) and Sublime Text Editor</li>
+                     <!-- END OF just a padding top to separate the list items -->
+                      <!-- just a padding top to separate the list items -->
                     <li class="c-letter-skills-list-item">- A passion for User Experience and best practices</li>
+                     <!-- END OF just a padding top to separate the list items -->
+                      <!-- just a padding top to separate the list items -->
                     <li class="c-letter-skills-list-item">- App Design Creation with AdobeXD</li>
+                     <!-- END OF just a padding top to separate the list items -->
+                      <!-- just a padding top to separate the list items -->
                     <li class="c-letter-skills-list-item">- Uses Git on CLI uploading to Github version control</li>
+                     <!-- END OF just a padding top to separate the list items -->
+                      <!-- just a padding top to separate the list items -->
                     <li class="c-letter-skills-list-item">- Cross browser and platform testing for Mac, Windows, iOS andAndroid</li>
+                     <!-- END OF just a padding top to separate the list items -->
+                      <!-- just a padding top to separate the list items -->
                     <li class="c-letter-skills-list-item">- Introduced to Java Programming via Mobile Development with Android studio</li>
+                     <!-- END OF just a padding top to separate the list items -->
+                      <!-- just a padding top to separate the list items -->
                 </ul>
+                 <!-- END OF similar to the class up above, position absolute and a rotate of 3 degrees, with a few width changes to fit in different screen sizes -->
             </div>
+              <!-- END OF this is the little list of skills with a writing pad background it uses the grid child properties and flex parent properties to centre itself properly in the grid column section -->
+
+
+            <!-- even though no rows where put on this section parent as a grid there is implicit rows forming to fit the content, so to fit this heading in place we have it a grid row: 1/2 this heading container also has a flex so we can oscillate from centre to left depending on the screen size.  The columns also change due to the screen size -->
             <div class="c-letters-skills-paragraph-heading h-flex">
+                <!-- styling for the header and a pseudo after for the gold border -->
                 <h1 class="c-letters-skills-paragraph-heading-title">Hi, I’m Michael. Nice to meet you.</h1>
+                  <!-- END OF styling for the header and a pseudo after for the gold border -->
             </div>
+
+             <!-- END OF even though no rows where put on this section parent as a grid there is implicit rows forming to fit the content, so to fit this heading in place we have it a grid row: 1/2 this heading container also has a flex so we can oscillate from centre to left depending on the screen size.  The columns also change due to the screen size -->
+
+
+             <!-- this paragraph container has explicit rows and columns to get the content to sit properly on screen depending on screen size, with flex direction column to keep the text going from bottom to top -->
             <div class="c-letters-skills-paragraph-text h-flex">
-                <p class="c-letters-skills-paragraph-text-desc">Having recently got my masters in mobile and web development my aim now is to get commercial experience as a software developer.  My development journey thus far has been one of deep learning of the LAMP stack with core UI manipulation skills with HTML5 CSS3 and Javascript.  Everything that has been developed up until now has been with all core languages. No frameworks have been used.  That is way my university cohorts and I were taught, therefore it made sense to carry on with that method of learning.  This doesn't mean I am framework averse, on the contrary, it is more of a preparation of what I progress to next.  Knowing the core language underneath the framework, serves one best when it comes to deciphering the inevitable error and bugs during the development iteration cycles.   </p>
+                <!-- different font sizes at difference screen sizes -->
+                <p class="c-letters-skills-paragraph-text-desc">Having recently got my masters (MSc) in mobile and web development my aim now is to get commercial experience as a software developer.  My development journey thus far has been one of deep learning of the LAMP stack with core UI manipulation skills with HTML5 CSS3 and Javascript.  Everything that has been developed up until now has been with all core languages. No frameworks have been used.  That is way my university cohorts and I were taught, therefore it made sense to carry on with that method of learning after I graduated.  This doesn't mean I am framework averse, on the contrary, it is more of a preparation of what I progress to next.  Knowing the core language underneath the framework, serves one best when it comes to deciphering the inevitable error and bugs during the development iteration cycles.   </p>
+                <!-- END OF different font sizes at difference screen sizes -->
+
+                <!-- different font sizes at difference screen sizes -->
                 <p class="c-letters-skills-paragraph-text-desc">The stage I am at now is that I am able to create a website application from design stage via adobe XD to conjure up compelling visual wireframes that I can develop into aesthetically appealing and user-friendly user Interfaces (UI) using HTML 5, CSS and Javascript.  This is know as a static website.  My portfolio site you are visiting is a one such site with a api plug-in via netlify so you can send me mail in the contact form below.  Furthermore, I can take that static build one step further and make it dynamic by building and connecting the data to a database using MySql while utilising a, 'back-end' programming language (PHP) to communicate with said database so one with no development experience can create, delete, update or delete their website data.  This is known as a CRUD application.  View the Metallica project down below in the, 'My Work' section for a relevant example.   
                 </p>
+
+                <!-- END OF different font sizes at difference screen sizes -->
+
+                <!-- different font sizes at difference screen sizes -->
                 <p class="c-letters-skills-paragraph-text-desc">  I feel I am ready to develop my coding skills further by becoming employed or contracted out as a full-stack web developer.  Feel free to contact me via the form for your web development needs.  I look forward to working with you.
                 </p>
-
+                <!-- END OF different font sizes at difference screen sizes -->
+                <!-- different font sizes at difference screen sizes also a mortifier here to make the text bold -->
                 <p class="c-letters-skills-paragraph-text-desc c-letters-skills-paragraph-text-desc--bold">
                     Kindest regards
 
                 </p>
+                 <!-- END OF different font sizes at difference screen sizes also a mortifier here to make the text bold -->
 
+                  <!-- different font sizes at difference screen sizes also a mortifier here to make the text bold -->
                  <p class="c-letters-skills-paragraph-text-desc c-letters-skills-paragraph-text-desc--bold">
                    Michael
                     
                 </p>
+
+                 <!-- END OF  different font sizes at difference screen sizes also a mortifier here to make the text bold -->
                
             </div>
+              <!-- END OF this paragraph container has explicit rows and columns to get the content to sit properly on screen depending on screen size, with flex direction column to keep the text going from bottom to top -->
         </section>
+         <!-- END OF this is a 3 column grid at mobile size then changes to a 4 column grid at desktop size with the inside two columns not going past the 1300px max width for the content, there is also a grid gap on it too -->
+
+         <!-- END OF THE LETTER SECTION -->
+
+
+
+         <!-- PORTFOLIO MODALS SECTION -->
+         <!-- ok a lot going on here in this section.  In this section there are two grids and one flex container.  The first grid is on this class which just establishes where the headings and the projects are to go.  It is a three column grid but really the first and the last column are basically margins, the middle column is where the projects are to go  -->
         <section class="c-portfolio-modal h-grid" id="portfolioModalSection">
+
+            <!-- this flex container is just flex direction column to keep the heading and the projects align from top to bottom with grid column 2 /3 to get it bang in the middle it also has a 1300px max width when the screen gets to desktop size with margin 0 and auto and width 100% to keep the projects spanning the whole fraction space set by the parent section grid -->
             <div class="c-portfolio-modal-flex-container h-flex">
+                <!-- just styles here with align centre since it is a flex child -->
                 <h1 class="c-portfolio-modal-title">
                     My work
                 </h1>
+<!-- END OF just styles here with align centre since it is a flex child -->
+
+                <!-- this is the second grid for the portfolio projects the mobile and ipad screens have 4 rows and 2 columns whereas the desktop has 2 rows and 4 columns with a height of a 100% -->
                 <div class="c-portfolio-modal-grid h-grid">
+
+                    <!-- this is the background images for the projects using the mixin, there is a position relative on it for the hover effect to take place as position absolute -->
                     <figure class="c-portfolio-modal-grid-background-img-uws h-position">
+                        <!-- this is where the hover effect takes place with the black opacity background so we can use the gold text, as the parent class above it as it has position relative, we can use position absolute with top, right, left bottom of 0 to cover the whole grid.  We start with top of 100% so when the hover comes in it goes to 0% top with a transition animation effect on the top property.  There is a display flex on this so we can use the property space-between to space out the text from top to bottom as the screen gets bigger-->
                         <figcaption class="c-portfolio-modal-grid-hover-effect">
-                            <h1 class="c-portfolio-modal-grid-hover-title">Project name
+
+                            <!-- this is just the heading styles for the smaller projects windows -->
+                            <h1 class="c-portfolio-modal-grid-hover-title-small-boxes">Masters Project
                             </h1>
-                            <p class="c-portfolio-modal-grid-hover-desc">This is a short description of how the project goes</p>
+
+                                <!-- END OF this is just the heading styles for the smaller projects windows -->
+
+
+                           <!-- just a semantic link with no text decoration with a two pseudo elements before and after.  The before is the BBC technique to make the whole figure clickable.  The after is for the border bottom under the link -->
                             <a href="#" class="c-portfolio-modal-grid-hover-link">Read More
+                                <!-- this arrow svg has a vertical align middle to get it to line up with the link text and a transform 270 degrees to get it pointing in the right direction with inline block to go beside the link text while still having a height -->
                                 <img src="img/arrow.svg" alt="arrow to next page" class="c-portfolio-modal-grid-hover-link-arrow-svg">
+
+                                 <!-- END OF this arrow svg has a vertical align middle to get it to line up with the link text and a transform 270 degrees to get it pointing in the right direction with inline block to go beside the link text while still having a height -->
                             </a>
+
+                               <!-- END OF just a semantic link with no text decoration with a two pseudo elements before and after.  The before is the BBC technique to make the whole figure clickable.  The after is for the border bottom under the link -->
                         </figcaption>
-                        <!---portfolio modal one--->
+<!-- END OF this is where the hover effect takes place with the black opacity background so we can use the gold text, as the parent class above it as it has position relative, we can use position absolute with top, right, left bottom of 0 to cover the whole grid.  We start with top of 100% so when the hover comes in it goes to 0% top with a transition animation effect on the top property.  There is a display flex on this so we can use the property space-between to space out the text from top to bottom as the screen gets bigger-->
+
+
+                        <!---PORTFOLIO MODAL ONE--->
+            <!-- This is quite an interesting class.  First you do the pop up modal cold with display fixed and background white to cover the original design underneath, then with the top, right, bottom, left properties we can cover the screen we need, any space left we use box shadow to black out the remainder of the screen we hide the overflow on the x axis and scroll the y axis, with a healthy z;index so the pop up becomes priority. Once complete with the design we put it to display none.  Then we add a dynamic class with the animation keyframe function name and what you want this animation to do on the properties displayed in the keyframe.  The keyframe function name toggles when we open and close the pop up with display block and none as the dynamic class also toggles  -->
                         <div class="c-pop-up-project" id="c-pop-up-project-from-link">
-                            <!---the modal pop up's header---->
+
+
+                    <!---THE MODAL POP UP'S HEADER---->
+                    <!-- just a semantic section tag -->
                             <section class="c-pop-up-project-header">
-                                <div class="c-pop-up-project-header-background-image-uni ">
+                                <!-- just the mixin background technique -->
+                                <div class="c-pop-up-project-header-background-image-uni "> 
+                                    <!-- the key classes is position fixed, border radius, box shadow and width of 2em and the top and left property to get the X in the top right hand corner and z:index  -->
                                     <button class="c-pop-up-project-header-x-to-escape-image-button  ">
+                                        <!-- just a semantic img tag -->
                                         <img src="img/xThisTimeExit.svg" alt="" class="c-pop-up-project-header-x-to-escape-image">
+
+                                         <!--END OF just a semantic img tag -->
+                                         <!-- this is just part of BBC technique to give more click space to the user if they don't exactly hit the x, because the parent is position fixed, it will be relative to that -->
                                         <a href="#c-pop-up-project-header-from-link" class="c-pop-up-project-header-x-link-out-of-modal"></a>
+
+                                          <!-- END OF this is just part of BBC technique to give more click space to the user if they don't exactly hit the x, because the parent is position fixed, it will be relative to that -->
                                     </button>
+
+                                     <!-- END OF the key classes is position fixed, border radius, box shadow and width of 2em and the top and left property to get the X in the top right hand corner and z:index  -->
+
+                                     <!-- this class has a height of 70vh and a opacity to see a little of the background image through it with display flex column with justify centre the text and gold for the writing text -->
                                     <div class="c-pop-up-project-header-title-container h-flex">
-                                        <h1 class="c-pop-up-project-header-title"> Masters Project <span class="c-pop-up-project-header-sub-heading">The Research Question</span>
+                                        <!-- this class actually has the background colour on it and it responsible for the block size with its necessary styles on it -->
+                                        <h1 class="c-pop-up-project-header-title"> Masters Project 
+                                            <!-- this has display block on it so the text can go underneath, it also has a pseudo before class with margin auto to centre the bottom border line effect -->
+                                            <span class="c-pop-up-project-header-sub-heading">The Research Question</span>
+                                             <!-- END OF this has display block on it so the text can go underneath, it also has a pseudo before class with margin auto to centre the bottom border line effect -->
                                         </h1>
+                                         <!-- END OF this class actually has the background colour on it and it responsible for the block size with its necessary styles on it -->
                                     </div>
+                                     <!-- END OF this class has a height of 70vh and a opacity to see a little of the background image through it with display flex column with justify centre the text and gold for the writing text -->
                                 </div>
+                                <!-- END OF just the mixin background technique -->
                             </section>
-                            <!---end of the modal pop up's header--->
-                            <!---beginning of the modal pop up's content--->
+                            <!-- END OF just a semantic section tag -->
+                             <!--- END OF THE MODAL POP UP'S HEADER---->
+
+
+
+                   
+                            <!---BEGINNING OF THE MODAL POP UP'S CONTENT--->
+                            <!-- just a semantic section class explaining the beginning of the content -->
                             <section class="c-pop-up-project-content">
-                                <div class="c-pop-up-project-content-wrapper">
+                                <!-- flex on the content so i can centre the content easily.  It is flex direction column to get the content from top to bottom, align items centre with a max of 1300px to  not let the paragraph content spin out of that -->
+                                <div class="c-pop-up-project-content-wrapper h-flex">
+                                    <!-- just styles for the heading -->
                                     <h5 class="c-pop-up-project-content-sub-title">The Research Question</h5>
+                                     <!-- END OF just styles for the heading -->
+
+                                     <!-- just colours and margins -->
+
                                     <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                     <!-- END OF just colours and margins -->
+
+                                     <!-- this class is interesting, to get the image effect to span the whole viewport width but also to go, 'into' the width we use the Calc() function to open the margin left and right.  the minus 50 vw takes the image left into the overflow space we can see (providing the body's tag is overflowX hidden) then we use the positive result of 50% on either margin side to bring it back into view of course to make this really work we need the img to be a 100vw.  -->
+
                                     <div class="c-pop-up-project-content-image-container-one">
+                                        <!-- width 100vw to get the effect described on the class above, with object-fit: cover to not lose any image resolution and height of 20vh -->
                                         <img src="img/uni.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-content-image-one">
+                                          <!-- END OF width 100vw to get the effect described on the class above, with object-fit: cover to not lose any image resolution and height of 20vh -->
                                     </div>
+
+                                     <!-- END OF this class is interesting, to get the image effect to span the whole viewport width but also to go, 'into' the width we use the Calc() function to open the margin left and right.  the minus 50 vw takes the image left into the overflow space we can see (providing the body's tag is overflowX hidden) then we use the positive result of 50% on either margin side to bring it back into view of course to make this really work we need the img to be a 100vw.  -->
+
+
+                                     <!-- just colours and margins -->
                                     <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                     <!-- END OF just colours and margins -->
+
+                                      <!-- just colours and margins -->
+
                                     <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                     <!-- END OF just colours and margins -->
+
+                                    
+                                     <!-- centred the image with margins -->
+
+
+                                    <div class="c-pop-up-project-content-image-container-two">
+                                         <!-- just a semantic img tag -->
                                     <img src="img/uni.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-content-image-two">
+                                     <!-- END OF just a semantic img tag -->
+                                 </div>
+                                     <!-- END OF centred the image with margins -->
+
+                                     <!-- just colours and margins -->
                                     <p class="c-pop-up-project-content-description ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                    <!-- END OF just colours and margins -->
+
+                                    <!-- just colours and margins -->
                                     <p class="c-pop-up-project-content-description ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                    <!-- END OF just colours and margins -->
+                                    <!-- just colours and margins -->
                                     <p class="c-pop-up-project-content-description ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                    <!-- END OF just colours and margins -->
+
+                                    <!-- just colours and margins -->
                                     <p class="c-pop-up-project-content-description  ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                                    <!-- END OF just colours and margins -->
+
+                                    <!-- the margin auto centre technique on the div rather than the image this time -->
                                     <div class="c-pop-up-project-content-image-container-three">
+
+                                        <!-- just a semantic image -->
                                         <img src="img/uni.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-content-image-three">
+                                         <!--  END OF just a semantic image -->
                                     </div>
+
+                                      <!-- END OF the margin auto centre technique on the div rather than the image this time -->
+
+                                       <!-- just colours and margins -->
                                     <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                     <!-- END OF just colours and margins -->
+
+                                     <!--  flex used here with space between property to get the two buttons to go at either end with width 100% to make this happen and take the full space -->
                                     <div class="c-pop-up-project-content-button-container h-flex">
+                                        <!-- our style pop up buttons a hover effect as well -->
                                         <button class="c-pop-up-project-content-button">Visit Site</button>
+                                         <!-- END OF our style pop up buttons with hover effect as well -->
+
+                                         <!-- our style pop up buttons with different colours, a hover effect as well -->
                                         <button class="c-pop-up-project-content-button c-pop-up-project-content-button--two">See Code</button>
+
+                                         <!--  END OF our style pop up buttons with different colours, a hover effect as well -->
                                     </div>
+
+                                       <!--  END OF flex used here with space between property to get the two buttons to go at either end with width 100% to make this happen and take the full space -->
                                 </div>
+                                 <!-- END OF flex on the content so i can centre the content easily.  It is flex direction column to get the content from top to bottom, align items centre with a max of 1300px to  not let the paragraph content spin out of that -->
                             </section>
-                            <!---end of the modal's pop up content---->
+                              
+                            <!-- END OF just a semantic section class explaining the beginning of the content -->
+                             <!--- END OF BEGINNING OF THE MODAL POP UP'S CONTENT--->
+                            
+
+                          
                         </div>
-                        <!---end of portfolio--->
+                         <!-- END OF This is quite an interesting class.  First you do the pop up modal cold with display fixed and background white to cover the original design underneath, then with the top, right, bottom, left properties we can cover the screen we need, any space left we use box shadow to black out the remainder of the screen we hide the overflow on the x axis and scroll the y axis, with a healthy z;index so the pop up becomes priority. Once complete with the design we put it to display none.  Then we add a dynamic class with the animation keyframe function name and what you want this animation to do on the properties displayed in the keyframe.  The keyframe function name toggles when we open and close the pop up with display block and none as the dynamic class also toggles  -->
+
+                          <!---END OF PORTFOLIO MODAL ONE--->
                     </figure>
+        <!-- END OF this is the background images for the projects using the mixin, there is a position relative on it for the hover effect to take place as position absolute -->
+
+
+        <!-- this is the background images for the projects using the mixin, there is a position relative on it for the hover effect to take place as position absolute -->
+
                     <figure class="c-portfolio-modal-grid-background-img-metallica h-position">
+
+                         <!-- this is where the hover effect takes place with the black opacity background so we can use the gold text, as the parent class above it as it has position relative, we can use position absolute with top, right, left bottom of 0 to cover the whole grid.  We start with top of 100% so when the hover comes in it goes to 0% top with a transition animation effect on the top property.  There is a display flex on this so we can use the property space-between to space out the text from top to bottom as the screen gets bigger-->
                         <figcaption class="c-portfolio-modal-grid-hover-effect">
-                            <h1 class="c-portfolio-modal-grid-hover-title-small-boxes  ">Project Name
+
+                              <!-- this is the heading style for the major project -->
+                            <h1 class="c-portfolio-modal-grid-hover-title">Metallica - The CRUD APP
                             </h1>
-                            <a href="#c-pop-up-project-from-link" class="c-portfolio-modal-grid-hover-link">Read More
-                                <img src="img/arrow.svg" alt="arrow to next page" class="c-portfolio-modal-grid-hover-link-arrow-svg"></a>
+
+                               <!-- END OF this is the heading style for the major project -->
+
+                               <!-- the style paragraph with bigger line height, the other projects do  not have  a paragraph section -->
+                             <p class="c-portfolio-modal-grid-hover-desc">This application has administrator capability - so a non web developer can create, update and delete new information </p>
+
+                              <!-- END OF the style paragraph with bigger line height, the other projects do  not have  a paragraph section -->
+
+
+
+                           <!-- just a semantic link with no text decoration with a two pseudo elements before and after.  The before is the BBC technique to make the whole figure clickable.  The after is for the border bottom under the link -->
+
+                            <a href="#c-pop-up-project-from-link" class="c-portfolio-modal-grid-hover-link ">Read More
+
+
+                                <!-- this arrow svg has a vertical align middle to get it to line up with the link text and a transform 270 degrees to get it pointing in the right direction with inline block to go beside the link text while still having a height -->
+                                <img src="img/arrow.svg" alt="arrow to next page" class="c-portfolio-modal-grid-hover-link-arrow-svg">
+                                   <!--  END OF this arrow svg has a vertical align middle to get it to line up with the link text and a transform 270 degrees to get it pointing in the right direction with inline block to go beside the link text while still having a height -->
+
+                            </a>
+
+                             <!-- END OF just a semantic link with no text decoration with a two pseudo elements before and after.  The before is the BBC technique to make the whole figure clickable.  The after is for the border bottom under the link -->
                         </figcaption>
-                        <!---portfolio modal two--->
+
+                        <!-- END OF this is where the hover effect takes place with the black opacity background so we can use the gold text, as the parent class above it as it has position relative, we can use position absolute with top, right, left bottom of 0 to cover the whole grid.  We start with top of 100% so when the hover comes in it goes to 0% top with a transition animation effect on the top property.  There is a display flex on this so we can use the property space-between to space out the text from top to bottom as the screen gets bigger-->
+
+                        <!---PORTFOLIO MODAL TWO--->
+
+     <!-- This is quite an interesting class.  First you do the pop up modal cold with display fixed and background white to cover the original design underneath, then with the top, right, bottom, left properties we can cover the screen we need, any space left we use box shadow to black out the remainder of the screen we hide the overflow on the x axis and scroll the y axis, with a healthy z;index so the pop up becomes priority. Once complete with the design we put it to display none.  Then we add a dynamic class with the animation keyframe function name and what you want this animation to do on the properties displayed in the keyframe.  The keyframe function name toggles when we open and close the pop up with display block and none as the dynamic class also toggles  -->
                         <div class="c-pop-up-project ">
-                            <!---the modal two pop up's header---->
+                            
+
+                             <!---THE MODAL POP UP'S HEADER---->
+                    <!-- just a semantic section tag -->
                             <section class="c-pop-up-project-header">
+
+                                 <!-- just the mixin background technique -->
                                 <div class="c-pop-up-project-header-background-image-metallica">
+
+                                    <!-- the key classes is position fixed, border radius, box shadow and width of 2em and the top and left property to get the X in the top right hand corner and z:index  -->
                                     <button class="c-pop-up-project-header-x-to-escape-image-button">
+
+                                        <!-- just a semantic img tag -->
                                         <img src="img/xThisTimeExit.svg" alt="" class="c-pop-up-project-header-x-to-escape-image">
+                                        <!-- END OF just a semantic img tag -->
+                                        <!-- this is just part of BBC technique to give more click space to the user if they don't exactly hit the x, because the parent is position fixed, it will be relative to that -->
                                         <a href="#c-pop-up-project-header-from-link" class="c-pop-up-project-header-x-link-out-of-modal"></a>
+                                         <!-- END OF this is just part of BBC technique to give more click space to the user if they don't exactly hit the x, because the parent is position fixed, it will be relative to that -->
+
                                     </button>
+
+                                     <!-- END OF the key classes is position fixed, border radius, box shadow and width of 2em and the top and left property to get the X in the top right hand corner and z:index  -->
+
+                                      <!-- this class has a height of 70vh and a opacity to see a little of the background image through it with display flex column with justify centre the text and gold for the writing text -->
                                     <div class="c-pop-up-project-header-title-container h-flex">
-                                        <h1 class="c-pop-up-project-header-title"> The CRUD Project<span class="c-pop-up-project-header-sub-heading">Metallica</span>
+
+                                         <!-- this class actually has the background colour on it and it responsible for the block size with its necessary styles on it -->
+                                        <h1 class="c-pop-up-project-header-title"> The CRUD Project
+
+                                              <!-- this has display block on it so the text can go underneath, it also has a pseudo before class with margin auto to centre the bottom border line effect -->
+                                            <span class="c-pop-up-project-header-sub-heading">Metallica</span>
+                                             <!--  END OF this has display block on it so the text can go underneath, it also has a pseudo before class with margin auto to centre the bottom border line effect -->
+
                                         </h1>
+                                         <!-- END OF this class actually has the background colour on it and it responsible for the block size with its necessary styles on it -->
                                     </div>
+                                      <!-- END OF this class has a height of 70vh and a opacity to see a little of the background image through it with display flex column with justify centre the text and gold for the writing text -->
                                 </div>
+                                 <!-- END OF just the mixin background technique -->
                             </section>
-                            <!---end of the modal two pop up's header--->
-                            <!---beginning of the modal two pop up's content--->
+                              <!-- END OF just a semantic section tag -->
+                             <!--- END OF THE MODAL POP UP'S HEADER---->
+
+
+                            <!---BEGINNING OF THE MODAL TWO POP UP'S CONTENT--->
+                              <!-- just a semantic section class explaining the beginning of the content -->
                             <section class="c-pop-up-project-content">
+
+                                <!-- flex on the content so i can centre the content easily.  It is flex direction column to get the content from top to bottom, align items centre with a max of 1300px to  not let the paragraph content spin out of that -->
                                 <div class="c-pop-up-project-content-wrapper">
+
+                                    <!-- just styles for the heading -->
                                     <h5 class="c-pop-up-project-content-sub-title">The Task</h5>
-                                    <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                                     <!--  END OF just styles for the heading -->
+
+                                      <!-- just colours and margins -->
+                                    <p class="c-pop-up-project-content-description">To achieve my masters certification in mobile and web development (MSc), one of the modules tasked me to develop a app in the music industry where a, 'administrator' with no web development experience could, 'create, delete and update' data as they see fit.  This is know in web developer parlance as a CRUD application. </p>
+
+                                     <!-- END OF just colours and margins -->
+
+                <!-- this class is interesting, to get the image effect to span the whole viewport width but also to go, 'into' the width we use the Calc() function to open the margin left and right.  the minus 50 vw takes the image left into the overflow space we can see (providing the body's tag is overflowX hidden) then we use the positive result of 50% on either margin side to bring it back into view of course to make this really work we need the img to be a 100vw.  -->
                                     <div class="c-pop-up-project-content-image-container-one">
+
+                                          <!-- width 100vw to get the effect described on the class above, with object-fit: cover to not lose any image resolution and height of 20vh -->
                                         <img src="img/black-album-hero.jpg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-content-image-one">
+
+                                          <!-- END OF width 100vw to get the effect described on the class above, with object-fit: cover to not lose any image resolution and height of 20vh -->
                                     </div>
-                                    <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
-                                    <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+
+                                     <!-- END OF this class is interesting, to get the image effect to span the whole viewport width but also to go, 'into' the width we use the Calc() function to open the margin left and right.  the minus 50 vw takes the image left into the overflow space we can see (providing the body's tag is overflowX hidden) then we use the positive result of 50% on either margin side to bring it back into view of course to make this really work we need the img to be a 100vw.  -->
+
+
+                                       <!-- just colours and margins -->
+                                    <p class="c-pop-up-project-content-description">This was not a challenge on the aesthetics side of things but more of a challenge of the dynamism of the website.  To ameliorate the design headache the students where allowed to take already successfully music websites and use their website design.  This was to allow the student to dedicate a hundred percent focus on the dynamic nature of the project, with a heavy focus on the, 'back-end' technologies of the project.  Namely, those programming language that reside on the LAMP stack - PHP and MySql.  </p>
+
+                                     <!-- END OF just colours and margins -->
+
+                                     <!-- just colours and margins -->
+                                    <p class="c-pop-up-project-content-description">My taste in music sways more towards the rock music genre so I decided my design would be a hybrid website of the two rock bands ZZ-top and Metallica.  I used the ZZ-top design fused with the Metallica's website content.    </p>
+
+                                     <!-- END OF just colours and margins -->
+                                      <!-- centred the image with margins -->
+
+
                                     <div class="c-pop-up-project-content-image-container-two">
+
+                                        <!-- just a semantic img tag -->
                                         <img src="img/album3.jpg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-content-image-two">
+
+                                          <!-- END OF just a semantic img tag -->
                                     </div>
-                                    <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
-                                    <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                       <!-- END OF centred the image with margins -->
+
+                                         <!-- just colours and margins -->
+                                    <p class="c-pop-up-project-content-description">   Typical music sites have sections such as; the tour schedule, the band news and gossip sections, a discography, tour photos and other data of a trivial nature.  This was perfect to make a CRUD type app out of because the development design could be focused on enabling the administrator to change, update these tour details, news stories photos etc, 'on the fly' whenever they needed to.</p>
+
+                                     <!-- END OF just colours and margins -->
+
+
+                                      <!-- just colours and margins -->
+                                    <p class="c-pop-up-project-content-description">
+                                    This task really stretched my development thinking in regards to how the back end architecture effects the client side and vice versa.  PHP sessions were invaluable in this project.  Sessions proved to be the best way to save the inputted data from the administrator from one page to another until the relevant query of the databases completed. </p>
+
+                                       <!-- END OF just colours and margins -->
+
+                                          <!-- the margin auto centre technique on the div rather than the image this time -->
                                     <div class="c-pop-up-project-content-image-container-three">
+
+                                           <!-- just a semantic image -->
                                         <img src="img/metallicaHome.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-content-image-three">
+
+                                         <!--  END OF just a semantic image -->
                                     </div>
-                                    <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                       <!-- END OF the margin auto centre technique on the div rather than the image this time -->
+
+                                        <!-- just colours and margins -->
+                                    <p class="c-pop-up-project-content-description">
+                                    Header redirects where utilised as a form of Data validation.  Error messages would be shown when the administrator inputs non-valid data.  Security was a minor concern with the project on the account that my examiners had to get access to the administrator side of the site.  Although I did show I could use hash functions, stored on the back end database to secure the site. </p>
+
+                                       <!-- END OF just colours and margins -->
+
+                                          <!-- just colours and margins -->
+                                     <p class="c-pop-up-project-content-description">
+                                     Subsequently the site design has been tightened to be made responsive and long winded, 'if' statements, particularly for the image uploads have been refactored.  Furthermore, AJAX was used when the administrator changed their mind on the image they were uploading.
+                                </p>
+
+                                  <!-- END OF just colours and margins -->
+
+                                    <!-- just colours and margins -->
+
+                                 <p class="c-pop-up-project-content-description">
+                                      For a more more development detailed account please see my GitHub repository by clicking the, 'see code' button.  Otherwise to view the site please click on the, 'Visit Site' button. </p>
+
+                                         <!-- END OF just colours and margins -->
+
+                                       <!--  flex used here with space between property to get the two buttons to go at either end with width 100% to make this happen and take the full space -->     
                                     <div class="c-pop-up-project-content-button-container h-flex">
-                                        <button class="c-pop-up-project-content-button"><a href="../metallicaTourProject/public/index.php" class="c-pop-up-project-content-links" target="_blank">Visit Site</a></button>
-                                        <button class="c-pop-up-project-content-button c-pop-up-project-content-button--two"><a href="https://github.com/MichaelCrawley1/metallicaTourProject  " class="c-pop-up-project-content-links" target="_blank">See Code</a></button>
+
+                                         <!-- our style pop up buttons a hover effect as well -->
+                                        <button class="c-pop-up-project-content-button h-position"><a href="../metallicaTourProject/public/index.php" class="c-pop-up-project-content-links" target="_blank">Visit Site</a></button>
+
+                                         <!-- END OF our style pop up buttons with hover effect as well -->
+
+                                          <!-- our style pop up buttons with different colours, a hover effect as well -->
+                                        <button class="c-pop-up-project-content-button c-pop-up-project-content-button--two h-position"><a href="https://github.com/MichaelCrawley1/metallicaTourProject  " class="c-pop-up-project-content-links" target="_blank">See Code</a></button>
+
+                                             <!--  END OF our style pop up buttons with different colours, a hover effect as well -->
                                     </div>
+
+                                       <!--  END OF flex used here with space between property to get the two buttons to go at either end with width 100% to make this happen and take the full space -->
                                 </div>
+                                 <!-- END OF flex on the content so i can centre the content easily.  It is flex direction column to get the content from top to bottom, align items centre with a max of 1300px to  not let the paragraph content spin out of that -->
                             </section>
-                            <!---end of the modal's two pop up content---->
+                             <!-- END OF just a semantic section class explaining the beginning of the content -->
+                             <!--- END OF BEGINNING OF THE MODAL POP UP'S CONTENT--->
                         </div>
-                        <!---end of portfolio two--->
+                        <!-- END OF This is quite an interesting class.  First you do the pop up modal cold with display fixed and background white to cover the original design underneath, then with the top, right, bottom, left properties we can cover the screen we need, any space left we use box shadow to black out the remainder of the screen we hide the overflow on the x axis and scroll the y axis, with a healthy z;index so the pop up becomes priority. Once complete with the design we put it to display none.  Then we add a dynamic class with the animation keyframe function name and what you want this animation to do on the properties displayed in the keyframe.  The keyframe function name toggles when we open and close the pop up with display block and none as the dynamic class also toggles  -->
+
+                          <!---END OF PORTFOLIO MODAL TWO--->
+
+
+
                     </figure>
-                    <figure class="c-portfolio-modal-grid-background-img-tomeStory h-position">
+
+
+                     <!-- END OF this is the background images for the projects using the mixin, there is a position relative on it for the hover effect to take place as position absolute -->
+
+                      <!-- this is the background images for the projects using the mixin, there is a position relative on it for the hover effect to take place as position absolute -->
+
+
+                 <!-- this is the background images for the projects using the mixin, there is a position relative on it for the hover effect to take place as position absolute -->
+                <figure class="c-portfolio-modal-grid-background-img-tomeStory h-position">
+                     <!-- this is where the hover effect takes place with the black opacity background so we can use the gold text, as the parent class above it as it has position relative, we can use position absolute with top, right, left bottom of 0 to cover the whole grid.  We start with top of 100% so when the hover comes in it goes to 0% top with a transition animation effect on the top property.  There is a display flex on this so we can use the property space-between to space out the text from top to bottom as the screen gets bigger-->
                         <figcaption class="c-portfolio-modal-grid-hover-effect">
-                            <h1 class="c-portfolio-modal-grid-hover-title-small-boxes  ">Project Name
+
+                             <!-- this is just the heading styles for the smaller projects windows -->
+                            <h1 class="c-portfolio-modal-grid-hover-title-small-boxes  ">Tome Story APP
                             </h1>
+
+                              <!-- END OF this is just the heading styles for the smaller projects windows -->
+
+                           <!-- just a semantic link with no text decoration with a two pseudo elements before and after.  The before is the BBC technique to make the whole figure clickable.  The after is for the border bottom under the link -->
                             <a href="#c-pop-up-project-from-link" class="c-portfolio-modal-grid-hover-link">Read More
-                                <img src="img/arrow.svg" alt="arrow to next page" class="c-portfolio-modal-grid-hover-link-arrow-svg"></a>
+
+                                 <!-- this arrow svg has a vertical align middle to get it to line up with the link text and a transform 270 degrees to get it pointing in the right direction with inline block to go beside the link text while still having a height -->
+                                <img src="img/arrow.svg" alt="arrow to next page" class="c-portfolio-modal-grid-hover-link-arrow-svg">
+                                  <!-- END OF this arrow svg has a vertical align middle to get it to line up with the link text and a transform 270 degrees to get it pointing in the right direction with inline block to go beside the link text while still having a height -->
+
+                            </a>
+
+                              <!-- END OF just a semantic link with no text decoration with a two pseudo elements before and after.  The before is the BBC technique to make the whole figure clickable.  The after is for the border bottom under the link -->
+
                         </figcaption>
-                        <!---portfolio modal three--->
+
+
+                        <!-- END OF this is where the hover effect takes place with the black opacity background so we can use the gold text, as the parent class above it as it has position relative, we can use position absolute with top, right, left bottom of 0 to cover the whole grid.  We start with top of 100% so when the hover comes in it goes to 0% top with a transition animation effect on the top property.  There is a display flex on this so we can use the property space-between to space out the text from top to bottom as the screen gets bigger-->
+
+                        <!---PORTFOLIO MODAL THREE--->
+
+                          <!-- This is quite an interesting class.  First you do the pop up modal cold with display fixed and background white to cover the original design underneath, then with the top, right, bottom, left properties we can cover the screen we need, any space left we use box shadow to black out the remainder of the screen we hide the overflow on the x axis and scroll the y axis, with a healthy z;index so the pop up becomes priority. Once complete with the design we put it to display none.  Then we add a dynamic class with the animation keyframe function name and what you want this animation to do on the properties displayed in the keyframe.  The keyframe function name toggles when we open and close the pop up with display block and none as the dynamic class also toggles  -->
                         <div class="c-pop-up-project">
-                            <!---the modal three pop up's header---->
+
+
+                            <!---THE MODAL THREE POP UP'S HEADER---->
+                             <!-- just a semantic section tag -->
                             <section class="c-pop-up-project-header">
+
+                                 <!-- just the mixin background technique -->
                                 <div class="c-pop-up-project-header-background-image-tomeStory">
+
+                                     <!-- the key classes is position fixed, border radius, box shadow and width of 2em and the top and left property to get the X in the top right hand corner and z:index  -->
                                     <button class="c-pop-up-project-header-x-to-escape-image-button">
+
+                                          <!-- just a semantic img tag -->
                                         <img src="img/xThisTimeExit.svg" alt="" class="c-pop-up-project-header-x-to-escape-image">
+
+                                          <!--END OF just a semantic img tag -->
+                                          <!-- this is just part of BBC technique to give more click space to the user if they don't exactly hit the x, because the parent is position fixed, it will be relative to that -->
                                         <a href="#c-pop-up-project-header-from-link" class="c-pop-up-project-header-x-link-out-of-modal"></a>
+
+                                         <!-- END OF this is just part of BBC technique to give more click space to the user if they don't exactly hit the x, because the parent is position fixed, it will be relative to that -->
                                     </button>
+
+                                      <!-- END OF the key classes is position fixed, border radius, box shadow and width of 2em and the top and left property to get the X in the top right hand corner and z:index  -->
+
+                                     <!-- this class has a height of 70vh and a opacity to see a little of the background image through it with display flex column with justify centre the text and gold for the writing text -->
                                     <div class="c-pop-up-project-header-title-container h-flex">
-                                        <h1 class="c-pop-up-project-header-title"> The Masters Project<span class="c-pop-up-project-header-sub-heading">The Research Question</span>
+
+                                         <!-- this class actually has the background colour on it and it responsible for the block size with its necessary styles on it -->
+                                        <h1 class="c-pop-up-project-header-title"> The Masters Project
+
+                                             <!-- this has display block on it so the text can go underneath, it also has a pseudo before class with margin auto to centre the bottom border line effect -->
+
+                                            <span class="c-pop-up-project-header-sub-heading">The Research Question</span>
+
+                                             <!-- END OF this has display block on it so the text can go underneath, it also has a pseudo before class with margin auto to centre the bottom border line effect -->
                                         </h1>
+                                         <!-- END OF this class actually has the background colour on it and it responsible for the block size with its necessary styles on it -->
                                     </div>
+                                      <!-- END OF this class has a height of 70vh and a opacity to see a little of the background image through it with display flex column with justify centre the text and gold for the writing text -->
                                 </div>
+                                 <!-- END OF just the mixin background technique -->
                             </section>
-                            <!---end of the modal's three pop up's header--->
-                            <!---beginning of the modal three pop up's content--->
+                            <!-- END OF just a semantic section tag -->
+                             <!--- END OF THE MODAL POP UP'S HEADER---->
+
+                            <!---BEGINNING OF THE MODAL THREE POP UP'S CONTENT--->
+                             <!-- just a semantic section class explaining the beginning of the content -->
                             <section class="c-pop-up-project-content">
+                                 <!-- flex on the content so i can centre the content easily.  It is flex direction column to get the content from top to bottom, align items centre with a max of 1300px to  not let the paragraph content spin out of that -->
                                 <div class="c-pop-up-project-content-wrapper">
+                                    <!-- just styles for the heading -->
                                     <h5 class="c-pop-up-project-content-sub-title">The Research Question</h5>
+                                     <!-- END OF just styles for the heading -->
+
+                                      <!-- just colours and margins -->
                                     <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                     <!-- END OF just colours and margins -->
+
+                                     <!-- this class is interesting, to get the image effect to span the whole viewport width but also to go, 'into' the width we use the Calc() function to open the margin left and right.  the minus 50 vw takes the image left into the overflow space we can see (providing the body's tag is overflowX hidden) then we use the positive result of 50% on either margin side to bring it back into view of course to make this really work we need the img to be a 100vw.  -->
                                     <div class="c-pop-up-project-content-image-container-one">
+
+                                         <!-- width 100vw to get the effect described on the class above, with object-fit: cover to not lose any image resolution and height of 20vh -->
                                         <img src="img/tome.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-content-image-one">
+                                         <!-- END OF width 100vw to get the effect described on the class above, with object-fit: cover to not lose any image resolution and height of 20vh -->
+
                                     </div>
+
+                                     <!-- END OF this class is interesting, to get the image effect to span the whole viewport width but also to go, 'into' the width we use the Calc() function to open the margin left and right.  the minus 50 vw takes the image left into the overflow space we can see (providing the body's tag is overflowX hidden) then we use the positive result of 50% on either margin side to bring it back into view of course to make this really work we need the img to be a 100vw.  -->
+
+                                       <!-- just colours and margins -->
                                     <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                     <!-- END OF just colours and margins -->
+
+                                        <!-- just colours and margins -->
+
                                     <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                    <!-- END OF just colours and margins -->
+
+                                     <!-- centred the image with margins -->
                                     <div class="c-pop-up-project-content-image-container-two">
+
+                                        <!-- just a semantic img tag -->
                                         <img src="img/tome.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-content-image-two">
+                                        
+                                         <!-- END OF just a semantic img tag -->
                                     </div>
+
+                                      <!-- END OF centred the image with margins -->
+
+                                         <!-- just colours and margins -->
                                     <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                     <!-- END OF just colours and margins -->
+
+                                      <!-- just colours and margins -->
                                     <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                     <!-- END OF just colours and margins -->
+
+                                      <!-- the margin auto centre technique on the div rather than the image this time -->
                                     <div class="c-pop-up-project-content-image-container-three">
+                                        <!-- just a semantic image -->
                                         <img src="img/tome.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-content-image-three">
+                                           <!--  END OF just a semantic image -->
                                     </div>
+                                     <!-- END OF the margin auto centre technique on the div rather than the image this time -->
+
+                                      <!-- just colours and margins -->
                                     <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                     <!-- END OF just colours and margins -->
+
+                                     <!--  flex used here with space between property to get the two buttons to go at either end with width 100% to make this happen and take the full space -->
+
                                     <div class="c-pop-up-project-content-button-container h-flex">
+
+                                         <!-- our style pop up buttons a hover effect as well -->
                                         <button class="c-pop-up-project-content-button">Visit Site</button>
+
+                                         <!-- END OF our style pop up buttons with hover effect as well -->
+                                           <!-- our style pop up buttons with different colours, a hover effect as well -->
                                         <button class="c-pop-up-project-content-button c-pop-up-project-content-button--two">See Code</button>
+                                         <!--  END OF our style pop up buttons with different colours, a hover effect as well -->
                                     </div>
+
+                                     <!--  END OF flex used here with space between property to get the two buttons to go at either end with width 100% to make this happen and take the full space -->
                                 </div>
+
+                                 <!-- END OF flex on the content so i can centre the content easily.  It is flex direction column to get the content from top to bottom, align items centre with a max of 1300px to  not let the paragraph content spin out of that -->
                             </section>
-                            <!---end of the modal's three pop up content---->
+                               <!-- END OF just a semantic section class explaining the beginning of the content -->
+                             <!--- END OF BEGINNING OF THE MODAL POP UP'S CONTENT--->
                         </div>
-                        <!---end of portfolio three--->
+
+                         <!-- END OF This is quite an interesting class.  First you do the pop up modal cold with display fixed and background white to cover the original design underneath, then with the top, right, bottom, left properties we can cover the screen we need, any space left we use box shadow to black out the remainder of the screen we hide the overflow on the x axis and scroll the y axis, with a healthy z;index so the pop up becomes priority. Once complete with the design we put it to display none.  Then we add a dynamic class with the animation keyframe function name and what you want this animation to do on the properties displayed in the keyframe.  The keyframe function name toggles when we open and close the pop up with display block and none as the dynamic class also toggles  -->
+                        <!---END OF PORTFOLIO THREE--->
+
                     </figure>
+                     <!-- END OF this is the background images for the projects using the mixin, there is a position relative on it for the hover effect to take place as position absolute -->
+
+                      <!-- this is the background images for the projects using the mixin, there is a position relative on it for the hover effect to take place as position absolute -->
                     <figure class="c-portfolio-modal-grid-background-img-movies h-position">
+
+                         <!-- this is where the hover effect takes place with the black opacity background so we can use the gold text, as the parent class above it as it has position relative, we can use position absolute with top, right, left bottom of 0 to cover the whole grid.  We start with top of 100% so when the hover comes in it goes to 0% top with a transition animation effect on the top property.  There is a display flex on this so we can use the property space-between to space out the text from top to bottom as the screen gets bigger-->
                         <figcaption class="c-portfolio-modal-grid-hover-effect">
-                            <h1 class="c-portfolio-modal-grid-hover-title-small-boxes  ">Project Name
+
+                             <!-- this is just the heading styles for the smaller projects windows -->
+                            <h1 class="c-portfolio-modal-grid-hover-title-small-boxes  ">Movies App
                             </h1>
+
+                             <!-- END OF this is just the heading styles for the smaller projects windows -->
+
+                               <!-- just a semantic link with no text decoration with a two pseudo elements before and after.  The before is the BBC technique to make the whole figure clickable.  The after is for the border bottom under the link -->
                             <a href="#c-pop-up-project-from-link" class="c-portfolio-modal-grid-hover-link">Read More
-                                <img src="img/arrow.svg" alt="arrow to next page" class="c-portfolio-modal-grid-hover-link-arrow-svg"></a>
+
+                                <!-- this arrow svg has a vertical align middle to get it to line up with the link text and a transform 270 degrees to get it pointing in the right direction with inline block to go beside the link text while still having a height -->
+                                <img src="img/arrow.svg" alt="arrow to next page" class="c-portfolio-modal-grid-hover-link-arrow-svg">
+
+                                  <!-- END OF this arrow svg has a vertical align middle to get it to line up with the link text and a transform 270 degrees to get it pointing in the right direction with inline block to go beside the link text while still having a height -->
+                            </a>
+
+                              <!-- END OF just a semantic link with no text decoration with a two pseudo elements before and after.  The before is the BBC technique to make the whole figure clickable.  The after is for the border bottom under the link -->
+
                         </figcaption>
-                        <!---portfolio modal four--->
+
+                    <!-- END OF this is where the hover effect takes place with the black opacity background so we can use the gold text, as the parent class above it as it has position relative, we can use position absolute with top, right, left bottom of 0 to cover the whole grid.  We start with top of 100% so when the hover comes in it goes to 0% top with a transition animation effect on the top property.  There is a display flex on this so we can use the property space-between to space out the text from top to bottom as the screen gets bigger-->
+
+
+                        <!--PORTFOLIO MODAL FOUR--->
+
+                          <!-- This is quite an interesting class.  First you do the pop up modal cold with display fixed and background white to cover the original design underneath, then with the top, right, bottom, left properties we can cover the screen we need, any space left we use box shadow to black out the remainder of the screen we hide the overflow on the x axis and scroll the y axis, with a healthy z;index so the pop up becomes priority. Once complete with the design we put it to display none.  Then we add a dynamic class with the animation keyframe function name and what you want this animation to do on the properties displayed in the keyframe.  The keyframe function name toggles when we open and close the pop up with display block and none as the dynamic class also toggles  -->
+
                         <div class="c-pop-up-project">
-                            <!---the modal four pop up's header---->
+                           <!---THE MODAL POP UP'S HEADER---->
+                    <!-- just a semantic section tag -->
+
+
                             <section class="c-pop-up-project-header">
+
+                                <!-- just the mixin background technique -->
                                 <div class="c-pop-up-project-header-background-image-movies">
+
+                                     <!-- the key classes is position fixed, border radius, box shadow and width of 2em and the top and left property to get the X in the top right hand corner and z:index  -->
+
                                     <button class="c-pop-up-project-header-x-to-escape-image-button">
+
+                                         <!-- just a semantic img tag -->
                                         <img src="img/xThisTimeExit.svg" alt="" class="c-pop-up-project-header-x-to-escape-image">
+
+                                         <!--END OF just a semantic img tag -->
+
+                                          <!-- this is just part of BBC technique to give more click space to the user if they don't exactly hit the x, because the parent is position fixed, it will be relative to that -->
                                         <a href="#c-pop-up-project-header-from-link" class="c-pop-up-project-header-x-link-out-of-modal"></a>
+
+                                         <!-- END OF this is just part of BBC technique to give more click space to the user if they don't exactly hit the x, because the parent is position fixed, it will be relative to that -->
+
                                     </button>
+
+                                     <!-- END OF the key classes is position fixed, border radius, box shadow and width of 2em and the top and left property to get the X in the top right hand corner and z:index  -->
+
+                                       <!-- this class has a height of 70vh and a opacity to see a little of the background image through it with display flex column with justify centre the text and gold for the writing text -->
                                     <div class="c-pop-up-project-header-title-container h-flex">
-                                        <h1 class="c-pop-up-project-header-title"> The Masters Project<span class="c-pop-up-project-header-sub-heading">The Research Question</span>
+
+                                        <!-- this class actually has the background colour on it and it responsible for the block size with its necessary styles on it -->
+
+                                        <h1 class="c-pop-up-project-header-title"> The Masters Project
+
+                                             <!-- this has display block on it so the text can go underneath, it also has a pseudo before class with margin auto to centre the bottom border line effect -->
+                                            <span class="c-pop-up-project-header-sub-heading">The Research Question</span>
+
+                                             <!-- END OF this has display block on it so the text can go underneath, it also has a pseudo before class with margin auto to centre the bottom border line effect -->
                                         </h1>
+
+                                         <!-- END OF this class actually has the background colour on it and it responsible for the block size with its necessary styles on it -->
                                     </div>
+
+                                    <!-- END OF this class has a height of 70vh and a opacity to see a little of the background image through it with display flex column with justify centre the text and gold for the writing text -->
                                 </div>
+
+                                <!-- END OF just the mixin background technique -->
                             </section>
-                            <!---end of the modal fours pop up's header--->
-                            <!---beginning of the modal fours pop up's content--->
+                             <!-- END OF just a semantic section tag -->
+                             <!--- END OF THE MODAL POP UP'S HEADER---->
+
+
+
+                     <!---BEGINNING OF THE MODAL POP UP'S CONTENT--->
+                            <!-- just a semantic section class explaining the beginning of the content -->
                             <section class="c-pop-up-project-content">
+
+                                 <!-- flex on the content so i can centre the content easily.  It is flex direction column to get the content from top to bottom, align items centre with a max of 1300px to  not let the paragraph content spin out of that -->
+
+
                                 <div class="c-pop-up-project-content-wrapper">
+
+                                     <!-- just styles for the heading -->
                                     <h5 class="c-pop-up-project-content-sub-title">The Research Question</h5>
+
+                                     <!-- END OF just styles for the heading -->
+
+                                      <!-- just colours and margins -->
                                     <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                    <!-- END OF just colours and margins -->
+
+                                      <!-- this class is interesting, to get the image effect to span the whole viewport width but also to go, 'into' the width we use the Calc() function to open the margin left and right.  the minus 50 vw takes the image left into the overflow space we can see (providing the body's tag is overflowX hidden) then we use the positive result of 50% on either margin side to bring it back into view of course to make this really work we need the img to be a 100vw.  -->
+
                                     <div class="c-pop-up-project-content-image-container-one">
+
+                                         <!-- width 100vw to get the effect described on the class above, with object-fit: cover to not lose any image resolution and height of 20vh -->
                                         <img src="img/5-elysium.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-content-image-one">
+
+                                         <!-- END OF width 100vw to get the effect described on the class above, with object-fit: cover to not lose any image resolution and height of 20vh -->
                                     </div>
+
+                                     <!-- END OF this class is interesting, to get the image effect to span the whole viewport width but also to go, 'into' the width we use the Calc() function to open the margin left and right.  the minus 50 vw takes the image left into the overflow space we can see (providing the body's tag is overflowX hidden) then we use the positive result of 50% on either margin side to bring it back into view of course to make this really work we need the img to be a 100vw.  -->
+
+                                      <!-- just colours and margins -->
                                     <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                      <!-- END OF just colours and margins -->
+
+                                       <!-- just colours and margins -->
+
                                     <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                      <!-- END OF just colours and margins -->
+
+                                       <!-- centred the image with margins -->
                                     <div class="c-pop-up-project-content-image-container-two">
+
+                                         <!-- just a semantic img tag -->
                                         <img src="img/5-elysium.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-content-image-two">
+
+                                         <!-- END OF just a semantic img tag -->
                                     </div>
+
+                                     <!-- END OF centred the image with margins -->
+
+                                     <!-- just colours and margins -->
                                     <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                     <!-- END OF just colours and margins -->
+
+
+                                    <!-- just colours and margins -->
                                     <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                      <!-- END OF just colours and margins -->
+                                    <!-- just colours and margins -->
+
+                                      <!-- the margin auto centre technique on the div rather than the image this time -->
                                     <div class="c-pop-up-project-content-image-container-three">
+
+                                          <!-- just a semantic image -->
                                         <img src="img/5-elysium.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-content-image-three">
+
+                                         <!--  END OF just a semantic image -->
+
+                                          
                                     </div>
+
+                                     <!-- END OF the margin auto centre technique on the div rather than the image this time -->
+
+                                       <!-- just colours and margins -->
                                     <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                      <!-- END OF just colours and margins -->
+
+                                        <!--  flex used here with space between property to get the two buttons to go at either end with width 100% to make this happen and take the full space -->
+
+
                                     <div class="c-pop-up-project-content-button-container h-flex">
+
+                                         <!-- our style pop up buttons a hover effect as well -->
                                         <button class="c-pop-up-project-content-button">Visit Site</button>
+
+                                          <!-- END OF our style pop up buttons with hover effect as well -->
+
+                                            <!-- our style pop up buttons with different colours, a hover effect as well -->
                                         <button class="c-pop-up-project-content-button c-pop-up-project-content-button--two">See Code</button>
+
+                                          <!--  END OF our style pop up buttons with different colours, a hover effect as well -->
                                     </div>
+
+                                      <!--  END OF flex used here with space between property to get the two buttons to go at either end with width 100% to make this happen and take the full space -->
+
+                                </div>
+                                 <!-- END OF flex on the content so i can centre the content easily.  It is flex direction column to get the content from top to bottom, align items centre with a max of 1300px to  not let the paragraph content spin out of that -->
                             </section>
-                            <!---end of the modal's four pop up content---->
+                             <!-- END OF just a semantic section class explaining the beginning of the content -->
+                             <!--- END OF BEGINNING OF THE MODAL POP UP'S CONTENT--->
                         </div>
-                        <!---end of portfolio four--->
+                         <!-- END OF This is quite an interesting class.  First you do the pop up modal cold with display fixed and background white to cover the original design underneath, then with the top, right, bottom, left properties we can cover the screen we need, any space left we use box shadow to black out the remainder of the screen we hide the overflow on the x axis and scroll the y axis, with a healthy z;index so the pop up becomes priority. Once complete with the design we put it to display none.  Then we add a dynamic class with the animation keyframe function name and what you want this animation to do on the properties displayed in the keyframe.  The keyframe function name toggles when we open and close the pop up with display block and none as the dynamic class also toggles  -->
+                        <!---END OF PORTFOLIO FOUR--->
+
+
                     </figure>
+
+                     <!-- END OF this is the background images for the projects using the mixin, there is a position relative on it for the hover effect to take place as position absolute -->
+
+                      <!-- this is the background images for the projects using the mixin, there is a position relative on it for the hover effect to take place as position absolute -->
                     <figure class="c-portfolio-modal-grid-background-img-britishGas h-position">
+
+                          <!-- this is where the hover effect takes place with the black opacity background so we can use the gold text, as the parent class above it as it has position relative, we can use position absolute with top, right, left bottom of 0 to cover the whole grid.  We start with top of 100% so when the hover comes in it goes to 0% top with a transition animation effect on the top property.  There is a display flex on this so we can use the property space-between to space out the text from top to bottom as the screen gets bigger-->
+
+
                         <figcaption class="c-portfolio-modal-grid-hover-effect">
-                            <h1 class="c-portfolio-modal-grid-hover-title-small-boxes  ">Project Name
+
+                                <!-- this is just the heading styles for the smaller projects windows -->
+                            <h1 class="c-portfolio-modal-grid-hover-title-small-boxes  ">British Gas Copy
                             </h1>
+
+                          <!-- END OF this is just the heading styles for the smaller projects windows -->
+
+                            <!-- just a semantic link with no text decoration with a two pseudo elements before and after.  The before is the BBC technique to make the whole figure clickable.  The after is for the border bottom under the link -->
+
+
                             <a href="#c-pop-up-project-from-link" class="c-portfolio-modal-grid-hover-link">Read More
-                                <img src="img/arrow.svg" alt="arrow to next page" class="c-portfolio-modal-grid-hover-link-arrow-svg"></a>
+
+                                 <!-- this arrow svg has a vertical align middle to get it to line up with the link text and a transform 270 degrees to get it pointing in the right direction with inline block to go beside the link text while still having a height -->
+                                <img src="img/arrow.svg" alt="arrow to next page" class="c-portfolio-modal-grid-hover-link-arrow-svg">
+                                 <!-- END OF this arrow svg has a vertical align middle to get it to line up with the link text and a transform 270 degrees to get it pointing in the right direction with inline block to go beside the link text while still having a height -->
+
+                            </a>
+
+                              <!-- END OF just a semantic link with no text decoration with a two pseudo elements before and after.  The before is the BBC technique to make the whole figure clickable.  The after is for the border bottom under the link -->
                         </figcaption>
-                        <!---portfolio modal five--->
+
+                        <!-- END OF this is where the hover effect takes place with the black opacity background so we can use the gold text, as the parent class above it as it has position relative, we can use position absolute with top, right, left bottom of 0 to cover the whole grid.  We start with top of 100% so when the hover comes in it goes to 0% top with a transition animation effect on the top property.  There is a display flex on this so we can use the property space-between to space out the text from top to bottom as the screen gets bigger-->
+
+
+                        <!---PORTFOLIO MODAL FIVE--->
+
+                          <!-- This is quite an interesting class.  First you do the pop up modal cold with display fixed and background white to cover the original design underneath, then with the top, right, bottom, left properties we can cover the screen we need, any space left we use box shadow to black out the remainder of the screen we hide the overflow on the x axis and scroll the y axis, with a healthy z;index so the pop up becomes priority. Once complete with the design we put it to display none.  Then we add a dynamic class with the animation keyframe function name and what you want this animation to do on the properties displayed in the keyframe.  The keyframe function name toggles when we open and close the pop up with display block and none as the dynamic class also toggles  -->
                         <div class="c-pop-up-project">
-                            <!---the modal five pop up's header---->
+                             <!---THE MODAL POP UP'S HEADER---->
+                    <!-- just a semantic section tag -->
                             <section class="c-pop-up-project-header">
+                                <!-- just the mixin background technique -->
                                 <div class="c-pop-up-project-header-background-image-BG">
+
+                                    <!-- the key classes is position fixed, border radius, box shadow and width of 2em and the top and left property to get the X in the top right hand corner and z:index  -->
                                     <button class="c-pop-up-project-header-x-to-escape-image-button">
+
+                                        <!-- just a semantic img tag -->
                                         <img src="img/xThisTimeExit.svg" alt="" class="c-pop-up-project-header-x-to-escape-image">
+
+                                         <!--END OF just a semantic img tag -->
+
+                                         <!-- this is just part of BBC technique to give more click space to the user if they don't exactly hit the x, because the parent is position fixed, it will be relative to that -->
                                         <a href="#c-pop-up-project-header-from-link" class="c-pop-up-project-header-x-link-out-of-modal"></a>
+
+                                         <!-- END OF this is just part of BBC technique to give more click space to the user if they don't exactly hit the x, because the parent is position fixed, it will be relative to that -->
                                     </button>
+
+                                     <!-- END OF the key classes is position fixed, border radius, box shadow and width of 2em and the top and left property to get the X in the top right hand corner and z:index  -->
+
+                                      <!-- this class has a height of 70vh and a opacity to see a little of the background image through it with display flex column with justify centre the text and gold for the writing text -->
+
+
                                     <div class="c-pop-up-project-header-title-container h-flex">
-                                        <h1 class="c-pop-up-project-header-title"> The Masters Project <span class="c-pop-up-project-header-sub-heading">The Research Question</span>
+
+                                          <!-- this class actually has the background colour on it and it responsible for the block size with its necessary styles on it -->
+                                        <h1 class="c-pop-up-project-header-title">
+
+
+                                         The Masters Project
+
+
+                                          <!-- this has display block on it so the text can go underneath, it also has a pseudo before class with margin auto to centre the bottom border line effect -->
+
+                                          <span class="c-pop-up-project-header-sub-heading">The Research Question</span>
+
+                                           <!-- END OF this has display block on it so the text can go underneath, it also has a pseudo before class with margin auto to centre the bottom border line effect -->
                                         </h1>
+
+                                          <!-- END OF this class actually has the background colour on it and it responsible for the block size with its necessary styles on it -->
                                     </div>
+                                     <!-- END OF this class has a height of 70vh and a opacity to see a little of the background image through it with display flex column with justify centre the text and gold for the writing text -->
                                 </div>
+
+                                 <!-- END OF just the mixin background technique -->
                             </section>
-                            <!---end of the modal fives pop up's header--->
-                            <!---beginning of the modal fives pop up's content--->
+                              <!-- END OF just a semantic section tag -->
+                             <!--- END OF THE MODAL POP UP'S HEADER---->
+
+
+                            <!---BEGINNING OF THE MODAL POP UP'S CONTENT--->
+                            <!-- just a semantic section class explaining the beginning of the content -->
                             <section class="c-pop-up-project-content">
+
+                                 <!-- flex on the content so i can centre the content easily.  It is flex direction column to get the content from top to bottom, align items centre with a max of 1300px to  not let the paragraph content spin out of that -->
                                 <div class="c-pop-up-project-content-wrapper">
+
+                                    <!-- just styles for the heading -->
                                     <h5 class="c-pop-up-project-content-sub-title">The Research Question</h5>
+
+                                      <!-- END OF just styles for the heading -->
+
+                                       <!-- just colours and margins -->
+
+
                                     <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                     <!-- END OF just colours and margins -->
+
+                                     <!-- this class is interesting, to get the image effect to span the whole viewport width but also to go, 'into' the width we use the Calc() function to open the margin left and right.  the minus 50 vw takes the image left into the overflow space we can see (providing the body's tag is overflowX hidden) then we use the positive result of 50% on either margin side to bring it back into view of course to make this really work we need the img to be a 100vw.  -->
+
                                     <div class="c-pop-up-project-content-image-container-one">
+
+                                         <!-- width 100vw to get the effect described on the class above, with object-fit: cover to not lose any image resolution and height of 20vh -->
                                         <img src="img/britishgas.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-content-image-one">
+
+                                         <!-- END OF width 100vw to get the effect described on the class above, with object-fit: cover to not lose any image resolution and height of 20vh -->
                                     </div>
+
+                                     <!-- END OF this class is interesting, to get the image effect to span the whole viewport width but also to go, 'into' the width we use the Calc() function to open the margin left and right.  the minus 50 vw takes the image left into the overflow space we can see (providing the body's tag is overflowX hidden) then we use the positive result of 50% on either margin side to bring it back into view of course to make this really work we need the img to be a 100vw.  -->
+
+                                        <!-- just colours and margins -->
                                     <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                    <!-- END OF just colours and margins -->
+
+                                      <!-- just colours and margins -->
+
+
                                     <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                     <!-- END OF just colours and margins -->
+
+                                     <!-- centred the image with margins -->
+
                                     <div class="c-pop-up-project-content-image-container-two">
+
+                                        <!-- just a semantic img tag -->
                                         <img src="img/britishgas.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-content-image-two">
+
+                                          <!-- END OF just a semantic img tag -->
                                     </div>
+
+                                     <!-- END OF centred the image with margins -->
+
+                                       <!-- just colours and margins -->
+
                                     <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                     <!-- END OF just colours and margins -->
+                                    <!-- just colours and margins -->
+
+
                                     <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                     <!-- END OF just colours and margins -->
+                                   
+
+                                      <!-- the margin auto centre technique on the div rather than the image this time -->
                                     <div class="c-pop-up-project-content-image-container-three">
+
+                                           <!-- just a semantic image -->
                                         <img src="img/britishgas.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-content-image-three">
+
+                                        <!--  END OF just a semantic image -->
                                     </div>
+
+                                     <!-- END OF the margin auto centre technique on the div rather than the image this time -->
+
+                                     <!-- just colours and margins -->
+
                                     <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+
+                                    <!-- END OF just colours and margins -->
+
+                                     <!--  flex used here with space between property to get the two buttons to go at either end with width 100% to make this happen and take the full space -->
+
+
                                     <div class="c-pop-up-project-content-button-container h-flex">
+
+                                          <!-- our style pop up buttons a hover effect as well -->
                                         <button class="c-pop-up-project-content-button">Visit Site</button>
+
+                                         <!-- END OF our style pop up buttons with hover effect as well -->
+
+                                           <!-- our style pop up buttons with different colours, a hover effect as well -->
                                         <button class="c-pop-up-project-content-button c-pop-up-project-content-button--two">See Code</button>
+                                         <!-- END OF our style pop up buttons with hover effect as well -->
+
                                     </div>
+
+                                     <!--  END OF flex used here with space between property to get the two buttons to go at either end with width 100% to make this happen and take the full space -->
                                 </div>
+
+                                  <!-- END OF flex on the content so i can centre the content easily.  It is flex direction column to get the content from top to bottom, align items centre with a max of 1300px to  not let the paragraph content spin out of that -->
+
                             </section>
-                            <!---end of the modal's fives pop up content---->
+
+                             <!-- END OF just a semantic section class explaining the beginning of the content -->
+                             <!--- END OF BEGINNING OF THE MODAL POP UP'S CONTENT--->
+
+
                         </div>
-                        <!---end of portfolio five--->
+
+                         <!-- END OF This is quite an interesting class.  First you do the pop up modal cold with display fixed and background white to cover the original design underneath, then with the top, right, bottom, left properties we can cover the screen we need, any space left we use box shadow to black out the remainder of the screen we hide the overflow on the x axis and scroll the y axis, with a healthy z;index so the pop up becomes priority. Once complete with the design we put it to display none.  Then we add a dynamic class with the animation keyframe function name and what you want this animation to do on the properties displayed in the keyframe.  The keyframe function name toggles when we open and close the pop up with display block and none as the dynamic class also toggles  -->
+                        <!---END OF PORTFOLIO FIVE--->
+
                     </figure>
+
+                       <!-- END OF this is the background images for the projects using the mixin, there is a position relative on it for the hover effect to take place as position absolute -->
+
                 </div>
+                <!-- END OF this is the second grid for the portfolio projects the mobile and ipad screens have 4 rows and 2 columns whereas the desktop has 2 rows and 4 columns with a height of a 100% -->
             </div>
+             <!-- END OF this flex container is just flex direction column to keep the heading and the projects align from top to bottom with grid column 2 /3 to get it bang in the middle it also has a 1300px max width when the screen gets to desktop size with margin 0 and auto and width 100% to keep the projects spanning the whole fraction space set by the parent section grid -->
         </section>
+
+         <!-- END OF ok a lot going on here in this section.  In this section there are two grids and one flex container.  The first grid is on this class which just establishes where the headings and the projects are to go.  It is a three column grid but really the first and the last column are basically margins, the middle column is where the projects are to go  -->
+
+        <!--END OF PORTFOLIO MODALS SECTION -->
+
+
+
+
+
+        <!-- This section class has the column grid for the contact form three columns first and the third are basically margins and the middle one is where the content is to go, the background effect is a nice gradient on this class coming from top left corner to bottom right corner -->
         <section class="c-contact h-grid" id="contactFormSection">
+
+            <!-- this class using the grid column property to set this form in the centre template column from the parent, it has our max width of 1300px and margin 0 auto to centre the form and a width of 100% to get the form to stretch out to its full capacity as it is also a flex parent -->
             <div class="c-contact-flex-container h-flex">
+
+                <!-- the parent is a flex item so we can centre the heading using the align centre because we are child of this parent -->
                 <h1 class="c-contact-title">Contact Me</h1>
+                 <!-- END OF the parent is a flex item so we can centre the heading using the align centre because we are child of this parent -->
+
+
+                <!-- just a semantic form tag with a font size of 2rem also with the netlify attributes to use netlify -->
                 <form action="/success" class="c-contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" name="contact" >
+
+                    <!-- This is for the spam to be caught in the honeypot coded by the guys at the back end at Netlify, it is set to display none -->
                     <input type="text" class="c-contact-form-input-honeypot-display-none" name="bot-field">
+                     <!-- END OF This is for the spam to be caught in the honeypot coded by the guys at the back end at Netlify, it is set to display none -->
+
+                     <!-- our labels set to display block -->
                     <label for="firstName" class="c-contact-label">
-                        full name: <span class="c-contact-label-star">*</span>
+                        full name: 
+                        <!-- this is our colour brown -->
+                        <span class="c-contact-label-star">*</span> <!-- END OF this is our colour brown -->
+                        <!-- our inputs with a slight grey border effect with 100% width with display block -->
                         <input placeholder="John Doe" type="text" class="c-contact-form-input c-js-contact-form-input--name " id="test" name="name"  pattern="[a-zA-Z]+ [a-zA-Z]+|[a-zA-Z]+ [a-zA-Z]+ " Title="Please write full name with one space between names (no Middle Names)!" required>
+
+                         <!-- END OF our inputs with a slight grey border effect with 100% width with display block -->
                     </label>
+                     
+
+                    <!-- END OF our labels set to display block -->
+
+
+                    <!-- our labels set to display block -->
                     <label for="email" class="c-contact-label">
-                        email: <span class="c-contact-label-star">*</span>
+                        email: 
+                         <!-- this is our colour brown -->
+                        <span class="c-contact-label-star">*</span>
+                        <!-- END OF this is our colour brown -->
+
+                         <!-- our inputs with a slight grey border effect with 100% width with display block -->
                         <input placeholder="john.doe@gmail.com" type="email" class="c-contact-form-input c-js-contact-form-input--email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please write in proper email address!" required >
+
+                         <!-- END OF our inputs with a slight grey border effect with 100% width with display block -->
                     </label>
+
+                       <!-- END OF our labels set to display block -->
+
+
+                        <!-- our labels set to display block -->
                     <label for="message" class="c-contact-label">
-                        message: <span class="c-contact-label-star">*</span>
+                        message: 
+                          <!-- this is our colour brown -->
+                        <span class="c-contact-label-star">*</span>
+                         <!-- END OF this is our colour brown -->
+
+
+                         <!-- this has resize vertical on it so if the user wants to extend their writing all the need is to scroll it down -->
                         <textarea placeholder="Please help me design and develop my website……." id="" cols="30" rows="10" class="c-contact-form-message-input c-js-contact-form-message-input--message" minlength="20" name="message" title="At least minimum of 20 characters to qualify for a suitable message." required></textarea>
+                         <!-- END OF this has resize vertical on it so if the user wants to extend their writing all the need is to scroll it down -->
+
                     </label>
+                     <!-- END OF our labels set to display block -->
+
+                     <!-- our form buttons with a background change on hover-->
                     <button type="submit" class="c-contact-button">send</button>
+                     <!-- END OF our form buttons with a background change on hover-->
                 </form>
+
+                  <!-- END OF  just a semantic form tag with a font size of 2rem also with the netlify attributes to use netlify -->
             </div>
+               <!-- END OF this class using the grid column property to set this form in the centre template column from the parent, it has our max width of 1300px and margin 0 auto to centre the form and a width of 100% to get the form to stretch out to its full capacity as it is also a flex parent -->
+          
         </section>
+
+          <!-- END OF This section class has the column grid for the contact form three columns first and the third are basically margins and the middle one is where the content is to go, the background effect is a nice gradient on this class coming from top left corner to bottom right corner -->
+
+          <!-- our usual three column grid here with the content being in the middle, background colour our black here -->
         <section class="c-portfolio-footer h-grid">
+            <!-- nice class here we use the grid column and make it the middle column to access then do a display flex on that, make it flex direction column to make the content vertical and then justify-content : space-between ans you have a nice gap between the child items -->
             <div class="c-portfolio-footer-flex-container h-flex">
+                <!-- has a nice opacity on it to make the text look more golden -->
                 <p class="c-portfolio-footer-desc">Follow me on social Media</p>
+                  <!-- END OF has a nice opacity on it to make the text look more golden -->
+
+                  <!-- Just a semantic div to act as one of the flex children here class here, however there is a pseudo element of after on this div to get a little divider between the icons and the last paragraph  -->
                 <div class="c-portfolio-footer-svg-container">
+                    <!-- a display inline block here so we can keep the two icons side by side but also still have height for the two of them so we can manipulate the images height and width, the social media images are provided by the svg -->
                     <a href="https://www.linkedin.com/in/michael-crawley-5235b555" class="c-portfolio-footer-social-media-links-linkedIn" target="_blank">
+
+                         <!-- END OF  a display inline block here so we can keep the two icons side by side but also still have height for the two of them so we can manipulate the images height and width, the social media images are provided by the svg -->
                        
                     </a>
+
+                      <!-- END OF  a display inline block here so we can keep the two icons side by side but also still have height for the two of them so we can manipulate the images height and width, the social media images are provided by the svg -->
+
+
+                       <!-- a display inline block here so we can keep the two icons side by side but also still have height for the two of them so we can manipulate the images height and width, the social media images are provided by the svg -->
+
+
                     <a href="https://github.com/MichaelCrawley1/myPortfolio" class="c-portfolio-footer-social-media-links-gitHub" target="_blank">
                       
                     </a>
+
+
+                     <!-- END OF  a display inline block here so we can keep the two icons side by side but also still have height for the two of them so we can manipulate the images height and width, the social media images are provided by the svg -->
+
+
                 </div>
+                   <!-- END OF Just a semantic div to act as one of the flex children here class here, however there is a pseudo element of after on this div to get a little divider between the icons and the last paragraph  -->
+
+                    <!-- has a nice opacity on it to make the text look more golden -->
                 <p class="c-portfolio-footer-desc">Copyright ©2021 M Crawley</p>
+
+                 <!-- END OF has a nice opacity on it to make the text look more golden -->
             </div>
+              <!-- nice class here we use the grid column and make it the middle column to access then do a display flex on that, make it flex direction column to make the content vertical and then justify-content : space-between ans you have a nice gap between the child items -->
         </section>
+          <!-- END OF our usual three column grid here with the content being in the middle, background colour our black here -->
     </div>
-    </svg>
+
+    <!-- end of the main vertical grid rows only to keep the html semantic -->
+  
 </body>
 
 </html>
