@@ -477,7 +477,7 @@ To sum up, the keyframe method is certainly more complex that the transition met
 
 <br/>
 
-#### Last But No Least - The Power of Commenting The Codebase
+## Last But No Least - The Power of Commenting The Codebase
 
 <br/>     
 
