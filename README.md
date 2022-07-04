@@ -192,15 +192,11 @@ Of the model view controller (MVC) architecture, the view side of things has alw
 
 </br>
 
-This section is very important to highlight.  Important because as an aspiring web developer, it would serve as great utility for potential employers that view this repository to be aware of where I think I am at with my development journey and where I think I need guidance in moving forward.
 
-I try to live as close as possible to the Japanese philosophy of, 'kaizen'. This translated means continuous and never ending improvement to things that matter.  Web development improvement really matters to me.
 
-Having communicated my psychology behind my journey I will try and illustrate what I think  I learned from this project and what I think needs developed moving forward.
 
-<br/>
 
-#### Design Theory - Colour Theory
+#### Design - Colour Theory
 
 <br/>
 
