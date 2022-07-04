@@ -188,7 +188,7 @@ Of the model view controller (MVC) architecture, the view side of things has alw
 
 </br>
 
-# Lessons Learned - The Design
+# Lessons Learned The Design
 
 </br>
 
@@ -278,7 +278,7 @@ Enclosed is a paragraph demonstrating that content.
 <br/>
 
 
-# Lessons Learned - The Code
+# Lessons Learned The Code
 
 <br/>
 
