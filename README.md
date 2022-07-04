@@ -111,7 +111,9 @@ Having said that, this doesn't mean I am ungrateful for the opportunity to go in
 
 *	[Description](#description)
 *	[Technologies](#tools-and-techniques)
-*	[Lessons Learned](#lessons-learned)
+*	[Lessons Learned - The Design](#lessons-learned-the-design)
+*	[Lessons Learned - The Code](#lessons-learned-the-code)
+*	[Conclusion](#conclusion)
 *	[Licence](#licence)
 *	[Author Info](#author-info)
 
@@ -129,13 +131,13 @@ A web developer portfolio site to me is best thought as a hub that stores all yo
 
 <br/> 
 
-- Who you are
-- Relevant Education
-- Relevant Skills
-- What you can do for the potential employer/client
-- Project Examples backing up your claim of what you can do for the employer/client
-- A way to get in contact with you for further discussion
-- Relevant Social Media Profiles
+- **Who you are**
+- **Relevant Education**
+- **Relevant Skills**
+- **What you can do for the potential employer/client**
+- **Project Examples backing up your claim of what you can do for the employer/client**
+- **A way to get in contact with you for further discussion**
+- **Relevant Social Media Profiles**
 
 <br/>
 
@@ -147,6 +149,7 @@ However to do this I needed some inspiration and help.  Enter Kevin Powell.
 
 <br/>
 
+***Kevin Powell's Portfolio Grid Tutorial***
 ![Kevin Powell Portfolio Tutorial With CSS Grid](https://i.imgur.com/58SD5M0.jpg "this is kevin's video")[The Link For Kevin Powell's CSS Grid Portfolio Tutorial](https://www.youtube.com/watch?v=dRuMoGNcJfw&t=2s)
 
 <br/>  
@@ -175,8 +178,7 @@ Of the model view controller (MVC) architecture, the view side of things has alw
 | HTML 5  | Sublime Text Editor |
 | CSS 3 (with grid and flexbox) | SASS preprocessor|
 | Javascript | Browser sync for immediate reloads in local environment|
-| PHP |NPM for local environment techniques |
-| MySql | Git on the CLI uploading to GitHub version control system |
+| GitHub | Git on the CLI uploading to GitHub version control system |
 
 
 </br>
@@ -186,7 +188,7 @@ Of the model view controller (MVC) architecture, the view side of things has alw
 
 </br>
 
-# Lessons Learned
+# Lessons Learned - The Design
 
 </br>
 
@@ -210,6 +212,8 @@ It was a great thing for me to do because my past somewhat rudimentary website d
 
 <br/>
 
+
+***Udemy Certificate - Adobe XD Masterclass (Cristian Doru Barin)***
 ![udemy certificate](https://i.imgur.com/l92iG4j.png "My Udemy Certificate")  
 
 <br/>
@@ -218,15 +222,15 @@ In no particular order what I learned is the following:
 
 <br/>
 
-- The three second rule 
-- Write content for the user not for yourself
-- The need for contrasting, be it fonts, colours text size exactly
-- Call to Action positions
-- 2 fonts, three max
-- Primary, Secondary and maybe a tertiary colour for CTA buttons
-- The use of light greys and different darker shades 
-- Overlays and linear gradients
-- Use Analytic tools to see how the users are responding to your site to continually improve design
+- **The three second rule** 
+- **Write content for the user not for yourself**
+- **The need for contrasting, be it fonts, colours text size exactly**
+- **Call to Action positions**
+- **Two fonts, three max**
+- **Primary, Secondary and maybe a tertiary colour for CTA buttons**
+- **The use of light greys and different darker shades** 
+- **Overlays and linear gradients**
+- **Use Analytic tools to see how the users are responding to your site to continually improve design**
 
 <br/>
 
@@ -235,6 +239,7 @@ Enclosed are my wireframes and site navigation design for mobile and desktop fro
 
 <br/>
 
+***Adobe XD Wireframes For This Portfolio Project***
 ![design portfolio path](https://i.imgur.com/l3ZOxNU.png "the wireframe pathways for mobile and desktop")    
 
 <br/>
@@ -258,27 +263,30 @@ Designing and developing websites in the future with a view to answering those e
 
 <br/>
 
-This was great to learn.  Coming from a life of sales I am very aware of the power of intangibles, something somewhat derogatory refereed to as, 'soft-skills'.  Things like; tone of voice,  appropriate words, active listening, identifying the user's need and then solving that need.
+This was also great to learn.  Coming from a life of sales I am very aware of the power of intangibles, something somewhat derogatory refereed to as, 'soft-skills'.  Things like; tone of voice,  appropriate words, active listening, identifying the user's need and then solving that need.
 
-I always wondered how does effective written content on the internet do the same thing.  It turns out instead of writing what you can do for the user using words like, "I, me etc" you write as if you were the user themselves.  So it is words and phrases like, "You will learn, You will receive, you will benefit from etc etc".
+I always wondered how does effective written content on the internet do the same thing.  It turns out instead of writing what you can do for the user using words like, "I, me etc" you write as if you were the user themselves.  So it is words and phrases like, "You will learn, You will receive, you will benefit from etc".
 
 It seems intuitive and simple to understand, however, so many written content is not done like this and results in very poor user retention rates.  I will continue to develop my content writing skills in my future web development projects.
 
-Having said that,  web development profiles are a little bit self indulgent by proxy of being your life's work, I still did try my best to write for the user here.
+Having said that,  web development profiles are a little bit self indulgent by proxy of being your life's work, I still did, however, try my best to write for the user here.
 
 Enclosed is a paragraph demonstrating that content.
 
 <br/>
 
+
+
+***Content Writing For The User:***
 ![Content from the portfolio](https://i.imgur.com/p1QNzJX.png "content written for the user")   
 <br/>
 
 
-<h2 align="center">The Code Itself</h2>
+# Lessons Learned - The Code
 
 <br/>
 
-Following on on from the written piece from my portfolio above,  typical web development portfolios are known as static websites being on the account that there is really is no need for a database - the model part of the MVC architecture.
+Following on from the written piece from my portfolio above,  typical web development portfolios are known as static websites being on the account that there is really is no need for a database - the model part of the MVC architecture.
 
 However, providing a form facility for users to contact you is very important and would usually be provided by a controller language such as PHP.
 
@@ -288,6 +296,7 @@ Here is the code from this web portfolio project that illustrates this technique
 
 <br/>
 
+***Code Snippet Showing The Workings Of Netlify In This Project***
 ![The Netlify Techniques](https://i.imgur.com/efcoDVr.png "The Netlify Techniques")
 
 <br/>
@@ -297,6 +306,7 @@ With the above code, this abstraction layer means I will receive the email reque
 
 <br/>
 
+***My Bespoke Return Message Via Netlify After User Completes The Form***
 ![The bespoke message for the end user](https://i.imgur.com/DmBp6nD.png "The bespoke message for the end user" )
 
 <br/>
@@ -311,13 +321,13 @@ The Netlify examples above enabled me to code up a static website with email cap
 
 <br/>
 
-I could have used third party libraries and portfolio templates to expedite the development process of the portfolio project.  However, my aforementioned need, 'to know it all' got the better of me here and after university on top of my design theory learning, I went through an intensive process of learning CSS GRID, Flexbox, the use of the CSS preprocessor (SASS) for file compartmentalisation and block object modifier (BEM) to make CSS easier to debug and fix.  
+I could have used third party libraries and portfolio templates to expedite the development process of the portfolio project.  However, my aforementioned need, 'to know it all' got the better of me here and after university on top of my design theory learning, I went through an intensive process of learning CSS GRID, Flexbox, the use of the CSS preprocessor (SASS) for file compartmentalisation and block object modifier (BEM) to make CSS easier to debug and fix.  Additionally, I also dedicated two to three months learning, 'git' from the command line uploading to GitHub as I realised if I have to work in coding teams this would be essential to know.  
 
 
 
 It was the long game, but I am so glad I did this.  CSS Grid and Flexbox properties are not intuitive, so it takes a while to get used to their idiosyncrasies.  However, once you have done that, executing your wireframe design becomes a very seamless process.  
 
-Now that I took the time to cultivate these skills and techniques has enabled me to develop portfolio type sites very quickly resulting in the fastest website possible for the user given there are no third parties (apart for netlify of course) stacked on top of the core language.  
+Now that I took the time to cultivate these skills and techniques, this has enabled me to develop portfolio type sites very quickly resulting in the fastest website possible for the user given there are no third parties (apart for netlify of course) stacked on top of the core language.  
 
 In fact my dissertation development project empirically proved this phenomenon - that the fasted websites are the ones developed with the core languages alone.  Here is the github for that dissertation project [(The Masters Dissertation Development Project - client side)](https://github.com/MichaelCrawley1/MscClientSide) [(The Masters Dissertation Development Project - server side)](https://github.com/MichaelCrawley1/MscServerSide1)
 
@@ -351,6 +361,7 @@ You can use these tools in many different ways and I am sure other developers wi
 
 <br/>
 
+***My CSS GRID System Explained***
 ![The CSS Grid System](https://i.imgur.com/2lmk2ci.png "The CSS Grid System")
 
 <br/>
@@ -359,11 +370,11 @@ What the above image of the code comments is trying to convey is how I use CSS G
 
 The literature online suggests that GRID is for layout and Flexbox is for components.  Reason being GRID is two dimensional (columns and rows) whereas Flexbox is one dimensional (columns or rows, can't do both at the same time).
 
-However going right away with the two dimensional approach of GRID to create your layouts creates problems at the html element level.  The problem it creates is that you lose the ability to keep the html semantic if you go layout first with columns and rows.  "Subgrid" is in development to get around this problem, however, since it is not available on all the major browsers yet I have came up with my own layout solution while keeping the HTML semantic.
+However going right away with the two dimensional approach of GRID to create your layouts creates problems at the HTML element level.  The problem it creates is that you lose the ability to keep the HTML semantic if you go layout first with columns and rows.  "Subgrid" is in development to get around this problem, however, since it is not available on all the major browsers yet I have came up with my own layout solution while keeping the HTML semantic.
 
 My solution is that you can use GRID for layout first but you must only use GRID for rows first to maintain the ability to keep your HTML elements semantic.  If you do columns and rows first, you have to flatten the HTML structure to get it to work and this makes the document object model (DOM) very hard to follow being that is becomes not a regular HTML document tree structure.
 
-So to keep that structure, it is best advised to only use rows on the GRID.  These rows will be each section from top to bottom of the site.  In each of these sections is when you can then do another GRID of rows and columns to get the design you are looking for and maintaining this important semantic HTML.  This will enable your site to look professional and be responsive.  Furthermore, Flexbox is used within the GRID to mostly centre the div blocks and to space out the child elements evenly
+Therefore, to keep that structure, it is best advised to only use rows on the GRID.  These rows will be each section from top to bottom of the site.  In each of these sections is when you can then do another GRID of rows and columns to get the design you are looking for and maintaining this important semantic HTML.  This will enable your site to look professional and be responsive.  Furthermore, Flexbox is used within the GRID to mostly centre the div blocks and to space out the child elements evenly
 
 
 
@@ -381,11 +392,13 @@ Portfolio sites do not really have this problem of scale (they are usually quite
 
 The reason I did this was I was finding the nested CSS elements that I was creating were proving harder and harder to keep track of.  With BEM everything is a class, nothing is nested.  This brings its own positives and negatives.
 
-The positive is that is does flatten the CSS and makes CSS incredible easy to debug and change.  The negative is that it is very class heavy, classes go on every element.  This could be construed as time consuming.  However, I noticed the more I used BEM, the extra classes became to feel a natural part of the development process and didn't really add too much development time.
+The positive is that is does flatten the CSS and makes CSS incredible easy to debug and change.  The negative is that it is very class heavy, classes go on every element.  This could be construed as time consuming.  However, I noticed the more I used BEM, the extra classes became to feel a natural part of the development process and didn't really add too much to the development time.
 
 Enclosed is an example of using BEM practices with this project.  Which see:
 
 <br/>
+
+***A BEM Example In This Portfolio Project***
 
 ![BEM In The Project](https://i.imgur.com/logp3Fv.png "BEM In The Project")
 
@@ -399,7 +412,7 @@ Enclosed is an example of using BEM practices with this project.  Which see:
 <br/>
 
 
-I got introduced to the power of keyframes because of a need to animate the modal pop ups for the portfolio projects.  I found that the tired and tested CSS property transition wasn't doing the job this time.  That was because I was toggling the pop-ups between the, 'display: none' and 'display: block' CSS properties.  Unfortunately it is not possible to use the transition property on a, 'display:none' element.
+I got introduced to the power of keyframes in this project because of a need to animate the modal pop ups for the portfolio projects.  I found that the tired and tested CSS property transition wasn't doing the job this time.  That was because I was toggling the pop-ups between the, 'display: none' and 'display: block' CSS properties.  Unfortunately it is not possible to use the transition property on a, 'display:none' element.
 
 The only way to animate on a, 'display:none' element is with key frames and with javascript on an event called, 'animationend'.
 
@@ -410,6 +423,7 @@ Perhaps an example may better illustrate what I am trying to say.
 
 <br/>
 
+***The Keyframe Names With Arrows***
 ![Arrows Pointing to the keyFrames name](https://i.imgur.com/S8OHGtj.png "Arrows Pointing to the keyFrames name")
 
 <br/>
@@ -419,12 +433,14 @@ The figure up above is showing via the use of the orange arrows what the name ea
 
 You can see it is going to animate over the opacity property.  The time of the animation going from 0 to 1 in opacity will be shown via the animation property itself.
 
-The, 'smoothPopUp' keyframe is completed going from, 'display: none' to, 'display: block' and it is vice versa with the, 'smoothPopOut' keyframe.  Further more the, 'display: block' or 'display: none' property are acted on first, however, the 'opacity' property via the keyframe animation makes it seem that the opacity is called first due to the slow, deliberate animation.
+The, 'smoothPopUp' keyframe is completed going from, 'display: none' to, 'display: block' and it is vice versa with the, 'smoothPopOut' keyframe.  Furthermore the, 'display: block' or 'display: none' property are acted on first, however, the 'opacity' property via the keyframe animation makes it seem that the opacity is called first due to the slow, deliberate animation.
 
 Enclosed is a javascript snippet and then a visual navigation of the site of how this animation action occurs.
 
 <br/>
 
+
+***JavaScript Code Snippet For The Animation In This Project***
 ![javascript code for the animation](https://i.imgur.com/KHYmuw8.png "javascript code for the animatio")
 
 
@@ -434,34 +450,115 @@ Here is the visual navigation of how the animation works with the keyframes on d
 
 <br/>
 
+***Click On The Blue Arrow To Begin The Animation***
 ![Click On The Modal](https://i.imgur.com/r8nOqzs.png "Click On The Modal")
 
 
 <br/>
 
-When that has been clicked on the modal then displays with a small animation on the previews shown keyframe all done dynamically by javascript. This is best illustrated via a screenshot on the google chrome dev tools.  Which see;
+When the modal has been clicked on, the modal then, 'pops-up' with a small animation using the previous shown keyframe all done dynamically by javascript. This is best illustrated via a screenshot on the google chrome dev tools.  Which see;
 
 
 <br/>
 
+***Visual Representation Of The KeyFrame Animation In Action***
 ![Google Chrome Dev Keyframe Illustration](https://i.imgur.com/UDTewy1.png "Google Chrome Dev Keyframe Illustration")
 
 <br/>
 
 
-What this figure above is showing quite well, is the visual execution of the javascript code of when a user clicks on one of the modals.  How it goes from, 'display: none' to, 'display:block' showing by the orange arrows and then how it takes that, 'display:block' and then performs an animation on it using the keyframe named, 'smoothPopUp' shown by the turquoise arrows.
+What this figure above is showing quite well, is the visual execution of the javascript code of when a user clicks on one of the modals.  From how the modal goes from, 'display: none' to, 'display:block' showing by the orange arrows and then how it takes that, 'display:block' and then performs an animation on it using the keyframe named, 'smoothPopUp' shown by the turquoise arrows.
 
 
-The opposite happens when the user clicks on the, gold 'X' shown by the red arrow.
+The opposite happens when the user clicks on the, gold 'X' with the keyframe, 'smoothPopOut' shown by the red arrow.
 
-In conclusion, the keyframe method is certainly more complex that the transition method of CSS, however, it does give you more animation options, particularly when the solution seems to be not as intuitive.  This is something that I have added to my growing toolbox of UI manipulation and will be sure to use this again in future projects.     
-
-Good.  Still to mention the comments on the project and then the conclusion, then done.  Great stuff.  
+To sum up, the keyframe method is certainly more complex that the transition method of CSS. However, it does give you more animation options, particularly when the solution seems to be not as intuitive.  This is something that I have added to my growing toolbox of UI manipulation and will be sure to use this again in future projects.
 
 
+<br/>
 
+### Last But No Least - The Power of Commenting The Codebase
+
+<br/>     
+
+In this project I have opted to comment every line possible. From the HTML code to the JavaScript code. This was a deliberate strategy. However when I eventually do become employed as a developer my future comments will be less intense as there will be less need to be as explicit with your comments because your code competency will not be questioned as severely as it will be at potential employment stage. Incidentally, I have subsequently found there was more utility in commenting the HTML side of things rather than the CSS side of things - CSS is the properties used, HTML gives you the chance to explain the CSS solution used.
+
+
+<br/>
+
+
+**For Potential Employers To View**
+
+<br/>
+
+I am now making a big push to gain commercial web developer experience. I am fully aware of the risk to potential employers and clients alike and the questions they need answered when hiring a new, junior-level developer. If they are to risk in taking on a junior developer they will want to know does this potential developer know why he/her used the code in the way that they have?
+
+After a year or two of study most of us students can find a way to, 'hack a development solution'. However, it takes far greater study and time to understand why the solution you have, 'hacked' works the way it does and therefore to communicate that programming wisdom gained to others. This I feel is an essential skill to cultivate if a developer has aspirations working within development teams and pitching to new clients.
+
+So what better way to show potential employers and clients alike that, as an aspiring junior developer, that you do know the solution you chose works the way it does by explicitly showing and telling them how through code comments?
+
+
+<br/>
+
+**Other Benefits To Commenting The Code Base**
+
+<br/>
+
+
+The benefit to heavily commenting code doesn't just stop with explicitly showing potential employers and clients that you know what you are doing. It also has the pleasant consequence of encouraging better solutions and opportunities for code refactoring too.
+
+Heavy comments encourages one to be very analytical and forensic with their code base. One is able to see problems very quickly that don't adhere to DRY (Don't repeat yourself) and SR (Single Responsibility) principles and amend accordingly.
+
+Furthermore, forensically looking at the CSS code base encouraged me to get rid of repeating properties and redundant CSS classes.
+
+<br/>
  
 
+*This GitHub commit is an example of this happening in this project, which see;*
+
+put in image here!
 
 
+<br/>
 
+# Conclusion
+
+<br/>
+
+Despite my mild annoyance at having to prove myself job worthy after completing my masters in mobile and web development, this portfolio project was a great use of my time.  I learned loads, particular from a design and a CSS point of view.  The understanding why a site should look the way it does merged well with my business mind.  Design, I see now is not just for aesthetics, but to compel the user to stay on your site and, 'act on something'.
+
+Moreover, the UI side has always been the bottleneck for me moving forward to the job market.  I always felt I was, 'hacking' a design and not really in control of it.  That is no longer the case.  CSS GRID and Flexbox with BEM practices makes me feel in complete control of the design.  This allows me to focus on the dynamic capability of the site to provide a superior user experience.
+
+I feel I am now ready to be employed or contacted out as a full stack/junior web developer and hopefully you agree.
+
+Kindest Regards
+
+Michael Crawley - Aspiring Web Developer  
+
+
+<br/>
+
+## Contributors
+
+- Michael J Crawley crawley349@btinternet.com
+
+<br/>
+
+## Licence
+
+MIT License
+
+© Michael J Crawley, Web developer, 2022
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+<br/>
+
+## Author Info
+Website - [Michael J Crawley](https://michael-crawley-portfolio.netlify.app/ "My Portfolio Site")
+
+[Back To The Top](#web-development-portfolio)
