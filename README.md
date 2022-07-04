@@ -200,7 +200,7 @@ Having communicated my psychology behind my journey I will try and illustrate wh
 
 <br/>
 
-##### Design Theory - Colour Theory
+#### Design Theory - Colour Theory
 
 <br/>
 
@@ -244,7 +244,7 @@ Enclosed are my wireframes and site navigation design for mobile and desktop fro
 
 <br/>
 
-##### The Three Second Rule
+#### The Three Second Rule
 
 <br/>
 
@@ -259,7 +259,7 @@ Designing and developing websites in the future with a view to answering those e
 
 <br/>
 
-##### Write For The User Not For Yourself
+#### Write For The User Not For Yourself
 
 <br/>
 
@@ -349,7 +349,7 @@ Learning this way does, 'reinvent the wheel' and is to be avoided in the industr
 
 <br/>
 
-### CSS GRID & Flexbox
+#### CSS GRID & Flexbox
 
 <br/>
 
@@ -382,7 +382,7 @@ Therefore, to keep that structure, it is best advised to only use rows on the GR
 
 <br/>
 
-##### BEM
+#### BEM
 
 <br/>
 
@@ -407,7 +407,7 @@ Enclosed is an example of using BEM practices with this project.  Which see:
 
 <br/>
 
-##### KeyFrames
+#### KeyFrames
 
 <br/>
 
@@ -477,7 +477,7 @@ To sum up, the keyframe method is certainly more complex that the transition met
 
 <br/>
 
-### Last But No Least - The Power of Commenting The Codebase
+#### Last But No Least - The Power of Commenting The Codebase
 
 <br/>     
 
