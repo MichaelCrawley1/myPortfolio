@@ -220,7 +220,7 @@ In no particular order what I learned is the following:
 
 - **The three second rule** 
 - **Write content for the user not for yourself**
-- **The need for contrasting, be it fonts, colours text size exactly**
+- **The need for contrasting, be it fonts, colours or text size**
 - **Call to Action positions**
 - **Two fonts, three max**
 - **Primary, Secondary and maybe a tertiary colour for CTA buttons**
@@ -340,7 +340,7 @@ However, the reason I stayed away from frameworks for the time being is that, ri
 
 It is longer and harder process to go through sure, but the rewards will be for all to see.  They (the professors) were under the opinion that developing this way makes for the best developers as when it comes to using a framework, bugs will be easier to fix because the  developer fully understands the core language underneath.
 
-Learning this way does, 'reinvent the wheel' and is to be avoided in the industry however by learning the core languages enables one to see and understand how the, 'wheel' was put together.  My best project to date is this [CRUD](https://github.com/MichaelCrawley1/metallicaTourProject) application that I coded from scratch with all the core languages.  This was my first true full stack project and enabled me to have a great appreciation for this, 'wheel' that is this complicated, heterogeneous, interdependent platform known as a web app.  Progressing with the frameworks now will give me great appreciation in what they are trying to do and I will develop and code accordingly.   
+Learning this way does, 'reinvent the wheel' and is to be avoided in the industry.  Having said that, by learning the core languages enables one to see and understand how the, 'wheel' was put together.  My best project to date is this [CRUD](https://github.com/MichaelCrawley1/metallicaTourProject) application that I coded from scratch with all the core languages.  This was my first true full stack project and enabled me to have a great appreciation for this, 'wheel' that is this complicated, heterogeneous, interdependent platform known as a web app.  Progressing with the frameworks now will give me great appreciation in what they are trying to do and I will develop and code accordingly.   
 
 
 <br/>
@@ -408,7 +408,7 @@ Enclosed is an example of using BEM practices with this project.  Which see:
 <br/>
 
 
-I got introduced to the power of keyframes in this project because of a need to animate the modal pop ups for the portfolio projects.  I found that the tired and tested CSS property transition wasn't doing the job this time.  That was because I was toggling the pop-ups between the, 'display: none' and 'display: block' CSS properties.  Unfortunately it is not possible to use the transition property on a, 'display:none' element.
+I got introduced to the power of keyframes in this project because of a need to animate the modal pop ups for the portfolio projects.  I found that the tried and tested CSS property transition wasn't doing the job this time.  That was because I was toggling the pop-ups between the, 'display: none' and 'display: block' CSS properties.  Unfortunately it is not possible to use the transition property on a, 'display:none' element.
 
 The only way to animate on a, 'display:none' element is with key frames and with javascript on an event called, 'animationend'.
 

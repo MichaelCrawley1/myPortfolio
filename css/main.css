@@ -337,6 +337,22 @@ template {
   font-weight: 400;
   margin: 0 .2em; }
 
+.c-js-pop-up-project-content-button--under-construction {
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: .05em;
+  background-color: #fff3b7;
+  text-transform: capitalize;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  color: #222222;
+  width: 180px;
+  height: 6rem;
+  border-radius: 2.5rem;
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0 .2em; }
+
 .c-pop-up-project-content-button:hover {
   background: #ffe66b; }
 
@@ -516,8 +532,7 @@ textarea {
   top: 0;
   bottom: 0;
   right: 0;
-  padding: 5em 6em 0em 6em;
-  border: 2px solid pink; }
+  padding: 5em 6em 0em 6em; }
 
 .c-hero-desktop-nav-menu {
   display: none; }
@@ -547,7 +562,9 @@ textarea {
 
 .c-hero-heading {
   grid-column: 2 / 2;
-  place-content: center center; }
+  place-content: center center;
+  flex-direction: column;
+  grid-row: 2 / 3; }
 
 .c-hero-portfolio-title {
   font-size: 2.2rem;
@@ -642,8 +659,7 @@ textarea {
   top: 2em;
   bottom: 0;
   left: -2em;
-  right: -.5em;
-  border: 5px solid pink; }
+  right: -.5em; }
   @media (min-width: 28.625rem) {
     .c-code-message-check-close-message::before {
       top: 1em; } }
@@ -708,7 +724,6 @@ textarea {
   left: -2em;
   right: 0;
   padding: .8em;
-  border: 2px solid pink;
   z-index: 1; }
 
 .c-mobile-nav-menu-list-item--no-border {
@@ -818,6 +833,24 @@ textarea {
   height: 100%;
   background-color: #eacd36;
   opacity: 36%; }
+
+.c-about-me-video {
+  margin-top: -2em;
+  max-width: 100%;
+  display: block;
+  height: auto;
+  padding: 1em; }
+
+.c-about-me-video::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 44px;
+  background: black; }
 
 .c-letter-skills {
   grid-template-columns: 10% 1fr 10%;
@@ -1013,7 +1046,7 @@ textarea {
 .c-portfolio-modal-grid-background-img-metallica {
   grid-column: 1 / 3;
   grid-row: 1 / 3;
-  background-image: url(../img/australia.jpg);
+  background-image: url(../img/metallicaHome.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
@@ -1311,6 +1344,17 @@ textarea {
     .c-pop-up-project-content-sub-title {
       font-size: 6.8rem; } }
 
+.c-pop-up-project-content-sub-title--further-sub-headings {
+  font-size: 3.8rem;
+  font-weight: 800;
+  font-family: "Roboto Condensed", sans-serif;
+  letter-spacing: .05em;
+  text-transform: capitalize;
+  text-decoration: none;
+  margin-top: 1em;
+  color: #222222;
+  margin-bottom: 0.5em; }
+
 .c-pop-up-project-content-description {
   margin-top: 1em;
   color: #646464; }
@@ -1370,43 +1414,153 @@ textarea {
      object-fit: cover; }
 
 .c-pop-up-project-content-image-two {
-  /*
-
-    @include mq($width: 50rem) {
-
-        margin: initial;
-        float: right;
-
-    }
-
-    @include mq($width: 70.25rem) {
-
-        width: 750px;
-        shape-outside: circle(70%);
-
-    }
-
-    */
   margin: 2em auto; }
 
 .c-pop-up-project-content-image-container-three {
   margin: 2em auto; }
 
-.c-pop-up-project-content-image-three {
-  /*   @include mq($width: 50rem) {
+/*
 
+.u-white{
 
-        float: left;
-        shape-outside: circle(50%);
-    }
-    
+	background-color: #fff;
+	color: #111111;
+}
 
-    @include mq($width: 70.25rem) {
+.u-align-center {
+  text-align: center;
+}
+@media (min-width: 1400px) {
+  .u-align-center-xxl {
+    text-align: center;
+  }
+}
 
-        width: 750px;
+.u-sheet{
 
-    }
-    */ }
+	width: 1140px;
+}
+
+.u-sheet-1{
+	min-height: 100vh;
+}
+.u-text-1{
+
+	font-size: 4.0625rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 60px 89px 0;
+    font-family: $ff-ss;
+    line-height: 1.1;
+}
+
+.u-text-2{
+
+	line-height: 2;
+    font-size: 2rem;
+    font-style: italic;
+    width: 518px;
+    margin: 27px auto 0;
+}
+
+.u-valign-middle{
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.u-image-1{
+	width: 570px;
+    height: 387px;
+    margin: 23px auto 0;
+}
+
+.u-image-contain{
+
+	object-fit: contain;
+    background-size: contain;
+}
+
+*/
+.c-back-up-pop-up-message {
+  position: fixed;
+  top: 5em;
+  left: 2em;
+  right: 2em;
+  z-index: 100;
+  height: 476px;
+  display: none;
+  background-color: #DBD8D8;
+  color: #111111;
+  text-align: center;
+  max-width: 1084px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+  box-shadow: 0 0 0 60em rgba(0, 0, 0, 0.7);
+  overflow-y: scroll; }
+  @media (min-width: 51.25rem) {
+    .c-back-up-pop-up-message {
+      height: 876px;
+      overflow-y: unset; } }
+
+.c-back-up-pop-up-messages-containers {
+  flex-direction: column;
+  align-items: center; }
+
+.c-pop-up-project-header-x-to-escape-image-button--this-time-for-construction-exit {
+  position: fixed;
+  top: 4.2em;
+  left: 1.3em;
+  max-width: 2em;
+  height: 2em;
+  background-color: #efefef;
+  border-radius: 2.2em;
+  cursor: pointer;
+  border: 1px solid #000000;
+  padding: 2px;
+  z-index: 5; }
+  @media (min-width: 71.6875rem) {
+    .c-pop-up-project-header-x-to-escape-image-button--this-time-for-construction-exit {
+      position: relative;
+      top: -0.9em;
+      left: -33.7em; } }
+
+.c-back-up-pop-up-message-title {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 60px 89px 0;
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 1.1; }
+  @media (min-width: 51.25rem) {
+    .c-back-up-pop-up-message-title {
+      font-size: 4.0625rem; } }
+
+.c-back-up-pop-up-message-image {
+  width: 270px;
+  height: 387px;
+  margin: 23px auto 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-size: contain; }
+  @media (min-width: 51.25rem) {
+    .c-back-up-pop-up-message-image {
+      width: 570px;
+      height: 387px; } }
+
+.c-back-up-pop-up-individual-message-containers {
+  padding: 1em; }
+
+.c-back-up-pop-up-individual-message {
+  line-height: 2;
+  font-size: 1.6rem;
+  font-style: italic;
+  max-width: 800px;
+  margin: 27px auto 0; }
+  @media (min-width: 51.25rem) {
+    .c-back-up-pop-up-individual-message {
+      font-size: 2rem; } }
 
 .c-contact {
   grid-template-columns: 10% 1fr 10%;

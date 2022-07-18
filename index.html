@@ -13,6 +13,7 @@
     <script src="js/main.js" defer></script>
     <script src="js/modalPopUp.js" defer></script>
     <script src="js/codeMessageCheck.js" defer></script>
+    <script src="js/constructionPopUp.js" defer></script>
     
 </head>
 
@@ -293,17 +294,24 @@
                 <h1 class="c-about-me-heading">About Me</h1>
                  <!-- END OF styles for the heading and pseudo after for the underline-->
                  <!-- this class has a flex on it with justify content: centre so we can centre the video image with changes in the height of the square per screen size -->
-                <div class="c-about-me-flex-container h-flex">
+                <div class="c-about-me-flex-container h-flex h-position">
                     <!-- just a semantic img tag -->
-                    <img src="img/imageForVideo.png" class="c-about-me-video">
+                    <video width="520" height="340" controls class="c-about-me-video h-position">
+                    <source src="firePlaceLongStory.mp4" type="video/mp4">
+                    </video>
+
+               
                      <!-- END OF just a semantic img tag -->
-                     <!-- the inline svg for the play button -->
+                     <!-- the inline svg for the play button 
                     <svg id="PlayVideo" xmlns="http://www.w3.org/2000/svg" width="60" height="53" viewBox="0 0 60 53" class="c-about-me-play-icon">
                         <g id="Polygon_2" data-name="Polygon 2" transform="translate(60) rotate(90)" fill="#c1b88e">
                             <path d="M 52.23256683349609 59.5 L 0.7674344182014465 59.5 L 26.5 1.237587332725525 L 52.23256683349609 59.5 Z" stroke="none" />
                             <path d="M 26.5 2.475151062011719 L 1.534858703613281 59 L 51.46514129638672 59 L 26.5 2.475151062011719 M 26.5 0 L 53 60 L 0 60 L 26.5 0 Z" stroke="none" fill="#707070" />
                         </g>
                     </svg>
+
+                    --->
+
                     <!-- END OF the inline svg for the play button -->
                 </div>
                   <!-- END OF this class has a flex on it with justify content: centre so we can centre the video image with changes in the height of the square per screen size -->
@@ -374,15 +382,22 @@
 
              <!-- this paragraph container has explicit rows and columns to get the content to sit properly on screen depending on screen size, with flex direction column to keep the text going from bottom to top -->
             <div class="c-letters-skills-paragraph-text h-flex">
-                <!-- different font sizes at difference screen sizes -->
-                <p class="c-letters-skills-paragraph-text-desc">Having recently got my masters (MSc) in mobile and web development my aim now is to get commercial experience as a software developer.  My development journey thus far has been one of deep learning of the LAMP stack with core UI manipulation skills with HTML5 CSS3 and Javascript.  Everything that has been developed up until now has been with all core languages. No frameworks have been used.  That is way my university cohorts and I were taught, therefore it made sense to carry on with that method of learning after I graduated.  This doesn't mean I am framework averse, on the contrary, it is more of a preparation of what I progress to next.  Knowing the core language underneath the framework, serves one best when it comes to deciphering the inevitable error and bugs during the development iteration cycles.   </p>
-                <!-- END OF different font sizes at difference screen sizes -->
+
+               
 
                 <!-- different font sizes at difference screen sizes -->
-                <p class="c-letters-skills-paragraph-text-desc">The stage I am at now is that I am able to create a website application from design stage via adobe XD to conjure up compelling visual wireframes that I can develop into aesthetically appealing and user-friendly user Interfaces (UI) using HTML 5, CSS and Javascript.  This is know as a static website.  My portfolio site you are visiting is a one such site with a api plug-in via netlify so you can send me mail in the contact form below.  Furthermore, I can take that static build one step further and make it dynamic by building and connecting the data to a database using MySql while utilising a, 'back-end' programming language (PHP) to communicate with said database so one with no development experience can create, delete, update or delete their website data.  This is known as a CRUD application.  View the Metallica project down below in the, 'My Work' section for a relevant example.   
+                <p class="c-letters-skills-paragraph-text-desc">Having recently got my masters (MSc) in mobile and web development my aim now is to get commercial experience as a web developer.  My development journey thus far has been one of deep learning of the LAMP stack (PHP, MySql) with core UI manipulation skills with HTML5 CSS3 and Javascript.  Everything that has been developed up until now has been with all core languages. No frameworks have been used.  That is way my university cohorts and I were taught, therefore it made sense to carry on with that method of learning after I graduated.  This doesn't mean I am framework averse, on the contrary, it is more of a preparation of what I progress to next.  Knowing the core language underneath the framework, serves one best when it comes to deciphering the inevitable error and bugs during the development iteration cycles.   </p>
+                <!-- END OF different font sizes at difference screen sizes -->
+
+                 
+
+                <!-- different font sizes at difference screen sizes -->
+                <p class="c-letters-skills-paragraph-text-desc">The stage I am at now is that I am in a position to offer to a prospective employer or client  to create their website application from design stage via adobe XD to conjure up compelling visual wireframes that I can develop into aesthetically appealing and user-friendly user Interfaces (UI) using HTML 5, CSS and Javascript.  This is know as a static website.  My portfolio site you are visiting is one such site with a api plug-in via netlify so you can send me mail in the contact form below.  Furthermore, I can take that static build one step further and make your website dynamic by building and connecting the data to a database using MySql while utilising a, 'back-end' programming language (PHP) to communicate with said database so one with no development experience can create, delete, update or delete their website data.  This is known as a CRUD application.  View the Metallica project down below in the, 'My Work' section for a relevant example.   
                 </p>
 
                 <!-- END OF different font sizes at difference screen sizes -->
+
+
 
                 <!-- different font sizes at difference screen sizes -->
                 <p class="c-letters-skills-paragraph-text-desc">  I feel I am ready to develop my coding skills further by becoming employed or contracted out as a full-stack web developer.  Feel free to contact me via the form for your web development needs.  I look forward to working with you.
@@ -439,7 +454,7 @@
                                 <!-- END OF this is just the heading styles for the smaller projects windows -->
 
 
-                           <!-- just a semantic link with no text decoration with a two pseudo elements before and after.  The before is the BBC technique to make the whole figure clickable.  The after is for the border bottom under the link -->
+                           <!-- just a semantic ink with no text decoration with a two pseudo elements before and after.  The before is the BBC technique to make the whole figure clickable.  The after is for the border bottom under the link -->
                             <a href="#" class="c-portfolio-modal-grid-hover-link">Read More
                                 <!-- this arrow svg has a vertical align middle to get it to line up with the link text and a transform 270 degrees to get it pointing in the right direction with inline block to go beside the link text while still having a height -->
                                 <img src="img/arrow.svg" alt="arrow to next page" class="c-portfolio-modal-grid-hover-link-arrow-svg">
@@ -502,16 +517,21 @@
                                 <!-- flex on the content so i can centre the content easily.  It is flex direction column to get the content from top to bottom, align items centre with a max of 1300px to  not let the paragraph content spin out of that -->
                                 <div class="c-pop-up-project-content-wrapper h-flex">
                                     <!-- just styles for the heading -->
-                                    <h5 class="c-pop-up-project-content-sub-title">The Research Question</h5>
+                                    <h5 class="c-pop-up-project-content-sub-title">The  Development Project </h5>
                                      <!-- END OF just styles for the heading -->
 
                                      <!-- just colours and margins -->
 
-                                    <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                                    <p class="c-pop-up-project-content-description">To justify teaching a student to masters level in web development means that a significant part of the academic process is theoretical and involves lots of literature research.  Sometimes this  indulgence in the theoretical method of research is not the, 'best practice' when it comes to considering practical developer employment positions in the future.
+                                    </p>
+                                     <p class="c-pop-up-project-content-description">
+                                    My academic advisor was very aware of this and stressed to the student cohort that when it comes to doing the dissertation, that, in his view, it was, 'best practise' to undertake a development project rather that a theoretical one.  The reason for him to give this advice, is that given that the eventual job of a web developer is a very practical one, (creating applications from enabling, quite often, five different programming languages to communicate to one another) therefore, it would serve the masters student best that he/she could showcase these needed industry practical skills via their dissertation project.  That is exactly what I done.    
 
-                                     <!-- END OF just colours and margins -->
+                                     </p>
 
-                                     <!-- this class is interesting, to get the image effect to span the whole viewport width but also to go, 'into' the width we use the Calc() function to open the margin left and right.  the minus 50 vw takes the image left into the overflow space we can see (providing the body's tag is overflowX hidden) then we use the positive result of 50% on either margin side to bring it back into view of course to make this really work we need the img to be a 100vw.  -->
+                                    
+
+                          <!-- this class is interesting, to get the image effect to span the whole viewport width but also to go, 'into' the width we use the Calc() function to open the margin left and right.  the minus 50 vw takes the image left into the overflow space we can see (providing the body's tag is overflowX hidden) then we use the positive result of 50% on either margin side to bring it back into view of course to make this really work we need the img to be a 100vw.  -->
 
                                     <div class="c-pop-up-project-content-image-container-one">
                                         <!-- width 100vw to get the effect described on the class above, with object-fit: cover to not lose any image resolution and height of 20vh -->
@@ -519,20 +539,30 @@
                                           <!-- END OF width 100vw to get the effect described on the class above, with object-fit: cover to not lose any image resolution and height of 20vh -->
                                     </div>
 
-                                     <!-- END OF this class is interesting, to get the image effect to span the whole viewport width but also to go, 'into' the width we use the Calc() function to open the margin left and right.  the minus 50 vw takes the image left into the overflow space we can see (providing the body's tag is overflowX hidden) then we use the positive result of 50% on either margin side to bring it back into view of course to make this really work we need the img to be a 100vw.  -->
+                                     <!-- END OF this class is interesting, to get the image effect to span the whole viewport width but also to go, 'into' the width we use the Calc() function to open the margin left and right.  the minus 50 vw takes the image left into the overflow space we can see (providing the body's tag is overflowX hidden) then we use the positive result of 50% on either margin side to bring it back into view of course to make this really work we need the img to be a 100vw.  -->       
+
+                                     <p class="c-pop-up-project-content-description">To keep this segment as relevant as possible with a view to a potential employer reading this information, I will give a brief outline of what the dissertation was trying to do and with which web technologies it was using to complete the task. </p>
 
 
-                                     <!-- just colours and margins -->
-                                    <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                                      <p class="c-pop-up-project-content-description">
+                                        This dissertation used four popular JavaScript Libraries (JLs).  Namely; jQuery, MooTools, Dojo Toolkit and Ext.js. Other JLs where considered, but with further research it was found they hadn't been updated for a very long time.
 
+                                    </p>
+
+                                     
                                      <!-- END OF just colours and margins -->
 
-                                      <!-- just colours and margins -->
+                                     
 
-                                    <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                                      <p class="c-pop-up-project-content-description">
 
-                                     <!-- END OF just colours and margins -->
+                                          The objective was to compare load speeds with these JLs while using AJAX techniques to consume and parse a bespoke web service's ( built by myself) movie data and take this data and display it at the client side.  The informational data structures at the web service for the client to consume was the same data in three different data formats.  Namely; json, xml and plain text.  The control language at the web service's end was PHP.   
+                                      </p> 
+                                       
+                                         
 
+
+                                    
                                     
                                      <!-- centred the image with margins -->
 
@@ -543,25 +573,29 @@
                                      <!-- END OF just a semantic img tag -->
                                  </div>
                                      <!-- END OF centred the image with margins -->
+                                     <p class="c-pop-up-project-content-description">
+                                        The aforementioned paragraph suggests there was a lot of technical rigour going on to make this development project work and that assumption would be correct.  It was not an easy task to complete, part of which makes me so proud to have done it. 
+                                    </p>
 
-                                     <!-- just colours and margins -->
-                                    <p class="c-pop-up-project-content-description ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                                    <p class="c-pop-up-project-content-description">
 
-                                    <!-- END OF just colours and margins -->
+                                         Consistency was the toughest thing to achieve in this research.  I had to test all the libraries under the exact same environment constraints. They all got tested with their CDN library versions and with their minified for, 'production' code base.
 
-                                    <!-- just colours and margins -->
-                                    <p class="c-pop-up-project-content-description ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                                         </p>  
+                                          <p class="c-pop-up-project-content-description">
+                                         Furthermore, to automate these tests, as automation takes away human error - I developed, with the help of stack overflow, a batch testing script that would run these JL applications 10000 times and display the average speed of these 10000 runs.  In retrospect this batch testing script is the thing I was most proud of creating.
 
-                                    <!-- END OF just colours and margins -->
-                                    <!-- just colours and margins -->
-                                    <p class="c-pop-up-project-content-description ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                                     </p>
 
-                                    <!-- END OF just colours and margins -->
+                                     <p class="c-pop-up-project-content-description">
 
-                                    <!-- just colours and margins -->
-                                    <p class="c-pop-up-project-content-description  ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
-                                    <!-- END OF just colours and margins -->
+                                         Proud of because it was the most difficult thing to do at my coding journey at the time back in 2019.  I noticed that similar research already done, utilised manual tests in their research and manual tests are very error prone and not thought of very highly when it comes to academic research.  I wanted to avoid any human errors in my research. Of which, potential employers are likely to find the results very interesting.     
+                                      </p>
 
+                                      
+
+                                        <!-- END OF just colours and margins -->  
+                                  
                                     <!-- the margin auto centre technique on the div rather than the image this time -->
                                     <div class="c-pop-up-project-content-image-container-three">
 
@@ -572,19 +606,57 @@
 
                                       <!-- END OF the margin auto centre technique on the div rather than the image this time -->
 
-                                       <!-- just colours and margins -->
-                                    <p class="c-pop-up-project-content-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, consectetur quis. Animi autem tempora, odio accusamus possimus iste, voluptates, earum unde itaque excepturi, aliquam? Incidunt odit eaque aut harum veniam, eligendi cupiditate, sed! Sint beatae est eius recusandae quos voluptatum.</p>
+                                    
 
-                                     <!-- END OF just colours and margins -->
+                                       <p class="c-pop-up-project-content-description">
+                                        jQuery (the most popular JL) loaded the same application significantly slower that the less popular JLs.  Dojo, (one of the least popular JLs) absolutely destroyed the others when it came to consuming and loading the web server's data.  Dojo was tremendously fast and throughout the research I found out why.  Dojo doesn't load it's whole code base at once like the other JLs do.  It only loads the code used, much like you were doing if you were only using vanilla javascript.  It does this with its in-built AMD technology.
+
+                                     <p class="c-pop-up-project-content-description">If employers that read this and are tied to industries that have severe developmental time constraints but also at the same time a strong need to create the fasted websites possible,  then perhaps using the JL Dojo will help achieve that aim and give you a competitive advantage to those  companies that don't.  I appreciate it is not as simple or as binary as that, but still something to strongly consider.</p>
+
+
+                                     <p class="c-pop-up-project-content-description">
+
+                                        Having said that, the results of DOJO, invoked a new thought to contribute to the research.  Just how fast is DOJO?  Is it near the speed of the core language itself?  Therefore the core language, JavaScript that these JLs are stacked on top off was brought in to the testing arena beside these JLs.  Again the results were very interesting.  
+
+                                    </p>
+
+                                      <div class="c-pop-up-project-content-image-container-three">
+
+                                        <!-- just a semantic image -->
+                                        <img src="img/uni.jpeg" alt="Univeristy Of West Of Scotland Symbol" class="c-pop-up-project-content-image-three">
+                                         <!--  END OF just a semantic image -->
+                                    </div>
+
+                                   <p class="c-pop-up-project-content-description">
+
+                                    As one would expect, the core javascript applications were faster than all the JLs but only just when it came to DOJO.  Talking the odd millisecond differential here in speed, so not really significant to notice.  That showed me that while the Core Language still has great utility for applications to be coded, 'raw', DOJO shows you can still get that web performance speed with significantly less development time than the core language.  A very interesting finding. 
+
+                                </p>
+
+
+
+                                 <p class="c-pop-up-project-content-description">
+                                    Furthermore, another amazing finding to come across is that with the JLs, the data format XML was the quickest to load its applications.  Whereas JSON was the quickest to load with the core language.  The project didn't find the answer as to why that was the case.  However, I suspect is must have something to do with how these AJAX techniques are coded into these JLs.  They seem to fuse very well with the XML document tree structure as opposed to the JSON one.  
+
+                                 </p>
+
+                                  <p class="c-pop-up-project-content-description">
+
+                                      For a more detailed account of this dissertation please click on the, 'view site' button on the bottom of this page.  Alternatively if you want to download and see how the load speed figures manifest themselves please click on the, 'see code' button.  Anything else do not hesitate to contact me via the contact form from this portfolio.
+
+                                      </p>  
+
+                                     
+
 
                                      <!--  flex used here with space between property to get the two buttons to go at either end with width 100% to make this happen and take the full space -->
                                     <div class="c-pop-up-project-content-button-container h-flex">
                                         <!-- our style pop up buttons a hover effect as well -->
-                                        <button class="c-pop-up-project-content-button">Visit Site</button>
+                                        <button class="c-pop-up-project-content-button c-js-pop-up-project-content-button--under-construction">Visit Site</button>
                                          <!-- END OF our style pop up buttons with hover effect as well -->
 
                                          <!-- our style pop up buttons with different colours, a hover effect as well -->
-                                        <button class="c-pop-up-project-content-button c-pop-up-project-content-button--two">See Code</button>
+                                        <button class="c-pop-up-project-content-button c-pop-up-project-content-button--two"><a href="https://github.com/MichaelCrawley1/MscClientSide  " class="c-pop-up-project-content-links" target="_blank">See Code</a></button>
 
                                          <!--  END OF our style pop up buttons with different colours, a hover effect as well -->
                                     </div>
@@ -971,7 +1043,7 @@
                                     <div class="c-pop-up-project-content-button-container h-flex">
 
                                          <!-- our style pop up buttons a hover effect as well -->
-                                        <button class="c-pop-up-project-content-button">Visit Site</button>
+                                        <button class="c-pop-up-project-content-button c-js-pop-up-project-content-button--under-construction">Visit Site</button>
 
                                          <!-- END OF our style pop up buttons with hover effect as well -->
                                            <!-- our style pop up buttons with different colours, a hover effect as well -->
@@ -1169,7 +1241,7 @@
                                     <div class="c-pop-up-project-content-button-container h-flex">
 
                                          <!-- our style pop up buttons a hover effect as well -->
-                                        <button class="c-pop-up-project-content-button">Visit Site</button>
+                                        <button class="c-pop-up-project-content-button c-js-pop-up-project-content-button--under-construction">Visit Site</button>
 
                                           <!-- END OF our style pop up buttons with hover effect as well -->
 
@@ -1373,7 +1445,7 @@
                                     <div class="c-pop-up-project-content-button-container h-flex">
 
                                           <!-- our style pop up buttons a hover effect as well -->
-                                        <button class="c-pop-up-project-content-button">Visit Site</button>
+                                        <button class="c-pop-up-project-content-button c-js-pop-up-project-content-button--under-construction">Visit Site</button>
 
                                          <!-- END OF our style pop up buttons with hover effect as well -->
 
@@ -1414,6 +1486,47 @@
         <!--END OF PORTFOLIO MODALS SECTION -->
 
 
+
+<!-- This little section is a mini pop up to inform the user that the project has not been uploaded to the portfilio at this time -->
+
+
+<section class="c-back-up-pop-up-message">
+    <div class="c-back-up-pop-up-messages-containers h-flex">
+
+        <button class="c-pop-up-project-header-x-to-escape-image-button c-pop-up-project-header-x-to-escape-image-button--this-time-for-construction-exit">
+                                        <!-- just a semantic img tag -->
+                                        <img src="img/xThisTimeExit.svg" alt="" class="c-pop-up-project-header-x-to-escape-image">
+
+                                         <!--END OF just a semantic img tag -->
+                                         <!-- this is just part of BBC technique to give more click space to the user if they don't exactly hit the x, because the parent is position fixed, it will be relative to that -->
+                                        <a href="#c-pop-up-project-header-from-link" class="c-pop-up-project-header-x-link-out-of-modal"></a>
+
+                                          <!-- END OF this is just part of BBC technique to give more click space to the user if they don't exactly hit the x, because the parent is position fixed, it will be relative to that -->
+                                    </button>
+        <h1 class="c-back-up-pop-up-message-title">Under Construction</h1>
+        <img src="img/60028-Converted.png" alt="this is an image of a rod being under repair, which means that just like the icon the website will be ready at a later date" class="c-back-up-pop-up-message-image">
+    <div class="c-back-up-pop-up-individual-message-containers">
+        <p class="c-back-up-pop-up-individual-message">
+            
+            Sorry the site you are looking to view has not been uploaded yet to the portfolio. We appreciate your patience on this matter and hope to have this sorted as soon as possible.
+        </p>
+         <p class="c-back-up-pop-up-individual-message">
+            
+           Kindest Regards
+        </p>
+
+          <p class="c-back-up-pop-up-individual-message">
+            
+          Michael Crawley Msc BA, Web Developer
+        </p>
+
+
+    </div>
+    </div>
+    
+
+
+</section>
 
 
 

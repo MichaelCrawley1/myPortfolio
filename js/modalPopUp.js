@@ -2,6 +2,8 @@
 
      let popUp = document.querySelectorAll(".c-portfolio-modal-grid-hover-link");
 
+     let theConstructionModalItself = document.querySelector(".c-back-up-pop-up-message");
+
      for (let i = 0; i < popUp.length; i++) {
 
          popUp[i].addEventListener("click",
@@ -48,6 +50,8 @@
 
                  subsequentClass.style.animation = "smoothPopOut 1000ms forwards";
                  subsequentClass.addEventListener("animationend", animateOut, false);
+
+                  theConstructionModalItself.style.display = "none";
 
              }
          }, false);
@@ -102,6 +106,7 @@
 
          modalOutTargetGreatGreatGrandfather.addEventListener("animationend", animateOut, false);
 
+         theConstructionModalItself.style.display = "none";
 
 
      }
