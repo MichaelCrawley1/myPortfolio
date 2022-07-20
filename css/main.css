@@ -373,6 +373,9 @@ html {
   font-size: 10px;
   scroll-behavior: smooth; }
 
+.c-overallWrapper-to-help-keep-overflowX-hidden-on-mobile {
+  overflow-x: hidden; }
+
 body {
   font-family: "vollkorn", serif;
   line-height: 1.7;
@@ -1419,70 +1422,6 @@ textarea {
 .c-pop-up-project-content-image-container-three {
   margin: 2em auto; }
 
-/*
-
-.u-white{
-
-	background-color: #fff;
-	color: #111111;
-}
-
-.u-align-center {
-  text-align: center;
-}
-@media (min-width: 1400px) {
-  .u-align-center-xxl {
-    text-align: center;
-  }
-}
-
-.u-sheet{
-
-	width: 1140px;
-}
-
-.u-sheet-1{
-	min-height: 100vh;
-}
-.u-text-1{
-
-	font-size: 4.0625rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin: 60px 89px 0;
-    font-family: $ff-ss;
-    line-height: 1.1;
-}
-
-.u-text-2{
-
-	line-height: 2;
-    font-size: 2rem;
-    font-style: italic;
-    width: 518px;
-    margin: 27px auto 0;
-}
-
-.u-valign-middle{
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
-	margin: 0 auto;
-}
-
-.u-image-1{
-	width: 570px;
-    height: 387px;
-    margin: 23px auto 0;
-}
-
-.u-image-contain{
-
-	object-fit: contain;
-    background-size: contain;
-}
-
-*/
 .c-back-up-pop-up-message {
   position: fixed;
   top: 5em;
@@ -1501,8 +1440,7 @@ textarea {
   overflow-y: scroll; }
   @media (min-width: 51.25rem) {
     .c-back-up-pop-up-message {
-      height: 876px;
-      overflow-y: unset; } }
+      height: 876px; } }
 
 .c-back-up-pop-up-messages-containers {
   flex-direction: column;
