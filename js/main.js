@@ -3,7 +3,7 @@ function start() {
     let hamburger = document.querySelector(".c-hero-layer-for-fat-fingers-mobile");
     let wrapperGrid = document.querySelector(".l-basic-grid");
     let exitHamburgerMenu = document.querySelector(".c-mobile-nav-hamburger-exit-container");
-
+    const mediaQuery = window.matchMedia("(min-width: 47rem)");
 
     // list items to go to the correct part on the page and to close the menu//
 
@@ -33,8 +33,21 @@ function start() {
 
     function mobileNavMenu() {
 
+         mediaQuery.addListener(menuScreenChange);
+
         wrapperGrid.classList.add("l-basic-grid-js-mobile-nav-menu");
 
+        function menuScreenChange() {
+
+            if (mediaQuery.matches) {
+
+                toggleHeader.classList.remove("l-basic-grid-js-mobile-nav-menu");
+                
+
+
+            }
+
+        }
 
 
     }
